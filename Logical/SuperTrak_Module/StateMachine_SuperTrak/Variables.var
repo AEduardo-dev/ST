@@ -1,0 +1,63 @@
+(*==============================================*)
+(*Process control variables*)
+(*==============================================*)
+VAR
+	Calibration_Finished : BOOL;
+	Shuttle_sent : USINT;
+	MES_Test : BOOL;
+	first_shuttle : BOOL;
+	Skills_Aborted : USINT;
+	Aborting_Init : BOOL;
+	Transition_From_Stopped : BOOL;
+	transitionFromAborted : BOOL;
+	QA_finished : BOOL;
+END_VAR
+(*==============================================*)
+(*Indexes for internal code use*)
+(*==============================================*)
+VAR
+	New_ID : USINT;
+	First_ID : USINT;
+	Last_ID : USINT;
+	Shuttle : USINT := 0;
+	shuttleCounter : USINT;
+	Last_Shuttle : DINT;
+	Index : USINT;
+	iShuttle : USINT;
+	iMessageHelper : USINT := 0; (* Calibration *)
+	Identifier : STRING[80];
+	j : USINT;
+	i : ARRAY[1..6] OF USINT;
+	Checking : BOOL;
+END_VAR
+(*==============================================*)
+(*Calibration state machine*)
+(*==============================================*)
+VAR
+	Calibration_State : Calibration_Enum;
+END_VAR
+(*==============================================*)
+(*Process Timers*)
+(*==============================================*)
+VAR
+	Counter_Check_Shuttle : TON;
+	Counter_Clearing_Timeout : TON;
+	Time_For_AbortClearing_Start : TON;
+	Time_For_AbortClearing_End : TON;
+	Time_For_Stop : TON;
+	Timer_Send_Super_Trak_In_Stop : TON;
+	check_Parking_Timeout : TON;
+	Timer_Outfeed_FRONT : TON;
+	Timer_Outfeed_BACK : TON;
+	Timer_Outfeed_DOWN : TON;
+	Timer_Outfeed_UP : TON;
+	Timer_Actuator_UP : TON;
+	Timer_Enable_Barrier : TON;
+	Timer_Actuator_DOWN : TON;
+END_VAR
+(*==============================================*)
+(*Aborted Calibration options*)
+(*==============================================*)
+VAR
+	SetID : BOOL;
+END_VAR

@@ -1,0 +1,56 @@
+(********************************************************************
+ * COPYRIGHT 2014 machineering GmbH & Co. KG
+ ********************************************************************
+ * Programm: MNG_Interface
+ * Datei: MNG_Interface.var
+ * Autor: machineering GmbH & Co. KG
+ * Erstellt: 22. Februar 2014
+ ********************************************************************
+ * Lokale Variablen des Programms MNG_Interface
+ ********************************************************************)
+VAR
+	potMsgLen : DINT := 0;
+	copyOutputs : MNG_COPY_OUTPUTS_INTO_MSG := (0);
+	copyInputs : MNG_COPY_MSG_TO_INPUTS := (0);
+	state : USINT := 0;
+	recvLen : UDINT := 0;
+	Connect : BOOL := TRUE;
+	port : UINT := 5001;
+	options : UDINT := 0;
+	tcpOpen : TcpOpen := (0);
+	tcpIOCtl : TcpIoctl := (0);
+	tcpSend : TcpSend := (0);
+	tcpClose : TcpClose := (0);
+	tcpRecv : TcpRecv := (0);
+	tcpClient : TcpClient := (0);
+END_VAR
+VAR CONSTANT
+	one : UDINT := 1;
+	zero : UDINT := 0;
+END_VAR
+VAR
+        SendMessage : MNG_RawDatagram := (0);
+	RecvMessage : MNG_RawDatagram := (0);
+END_VAR
+VAR CONSTANT
+	MNG_BUFFER_SIZE : UDINT := 10000;
+	MNG_MaxPayload : UDINT := 1400;
+END_VAR
+VAR
+	RecvBuffer : ARRAY[1..MNG_BUFFER_SIZE] OF UDINT := [0];
+	Recv_offset : DINT := 0;
+	Counter : UDINT := 0;
+	sendTON : TON := (0);
+        totalRecvLen : DINT;
+	connectionTON : TON := (0);
+	logCreate : AsArLogCreate := (0);
+	logClose : AsArLogDelete := (0);
+	logWrite : AsArLogWrite := (0);
+END_VAR
+VAR CONSTANT
+	MNG_ModuleName : STRING[7] := 'MNG_SIM';
+END_VAR
+VAR
+	arlogLEVEL_ERROR : BOOL;
+	sendDone : BOOL := FALSE;
+END_VAR

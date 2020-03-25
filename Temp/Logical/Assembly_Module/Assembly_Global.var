@@ -1,0 +1,147 @@
+(*
+ ********************************************************************
+ * Assembly Axis Variablesn *
+ ********************************************************************)
+VAR
+	Mp_Joint : ARRAY[0..5] OF MpAxisBasic;
+	Mp_JointParameters : ARRAY[0..5] OF MpAxisBasicParType;
+	Mp_Parameters : MpRoboArm6AxisParType;
+	Mp_Comau : MpRoboArm6Axis;
+	gAssemblyModule : opcAssemblyModuleType;
+END_VAR
+(*********************************************************************
+(*********************************************************************
+* HW sensors and actuators *
+*****************************************************************************************************************************)
+(*Sensors*)
+VAR
+	HW_Comau_IsGrabbing : BOOL := FALSE; (*does not exist*) (************************)
+	HW_Assem_PlasticCupsDrawer : BOOL := TRUE;
+	HW_Assem_PaperCupsDrawer : BOOL := TRUE; (************************)
+	HW_Assem_PelletPresent : BOOL; (************************)
+	HW_Assem_LeftDoorSensor : BOOL := TRUE;
+	HW_Assem_RightDoorSensor : BOOL := TRUE;
+END_VAR
+(*Actuators *)
+VAR
+	HW_Assem_PlasticLock : BOOL := TRUE;
+	HW_Assem_PaperLock : BOOL := TRUE; (************************)
+	HW_Comau_Gripper : BOOL := FALSE;
+END_VAR
+(*********************************************************************
+(*********************************************************************
+* Interface PLC CODE Assembly Variables
+*********************************************************************)
+(* Angles of the Motors *)
+VAR
+	Comau_Joint_1_Angle : LREAL;
+	Comau_Joint_2_Angle : LREAL;
+	Comau_Joint_3_Angle : LREAL;
+	Comau_Joint_4_Angle : LREAL;
+	Comau_Joint_5_Angle : LREAL;
+	Comau_Joint_6_Angle : LREAL;
+END_VAR
+(* Sensors *)
+VAR
+	Comau_IsGrabbing : BOOL; (************************)
+	Assem_PlasticCupsDrawer : BOOL;
+	Assem_PaperCupsDrawer : BOOL; (************************)
+	Assem_PelletPresent : BOOL; (************************)
+	Assem_LeftDoorSensor : BOOL;
+	Assem_RightDoorSensor : BOOL; (************************)
+	Assem_LockRight : BOOL;
+END_VAR
+(*Actuators *)
+VAR
+	Assem_PlasticLock : BOOL;
+	Assem_PaperLock : BOOL; (************************)
+	Comau_Gripper : BOOL;
+	Plastic_RefillDone : BOOL;
+	Paper_RefillDone : BOOL := FALSE;
+	Refill_Done : BOOL := FALSE;
+	Checked : BOOL;
+	TON_LocksSensor : TON := (0);
+	TON_PaperDrawer : TON := (0);
+	TON_PlasticDrawer : TON := (0); (************************)
+	TON_DrawerAlarm : TON := (0);
+	HW_Assem_PaperUpLeftDoor_Sens2 : TON := (0);
+END_VAR
+(*
+ ********************************************************************
+ *Cup Supply positions
+ ********************************************************************)
+VAR
+	Paper_Cup_Supply_Above_Pos : ARRAY[0..5] OF LREAL;
+	Paper_Cup_Supply_Position : ARRAY[0..5] OF LREAL;
+	Plastic_Cup_Supply_Position : ARRAY[0..5] OF LREAL;
+	Plastic_Cup_Supply_Above_Pos : ARRAY[0..5] OF LREAL;
+	Paper_Cup_Safe_Pos : ARRAY[0..5] OF LREAL;
+	Plastic_Cup_Safe_Pos : ARRAY[0..5] OF LREAL;
+END_VAR
+VAR CONSTANT
+	PLASTIC_CUP_INIT_POSITION : ARRAY[0..5] OF LREAL := [200,579.8,110,0,180,0]; (*needs to be changed if position of tray changes*)
+	PAPER_CUP_INIT_POSITION : ARRAY[0..5] OF LREAL := [200,-579.8,111,0,180,0]; (*needs to be changed if position of tray changes*)
+END_VAR
+(*
+ ********************************************************************
+ *Cup Tray constants and variables
+ ********************************************************************)
+VAR CONSTANT
+	DIST_X_PLASTIC_CENTR_SAME_ROW : REAL := 100;
+	DIST_X_PLASTIC_CENTR_DIFF_ROW : REAL := 50;
+	DIST_Y_PLASTIC_CENTR : REAL := 87;
+	PLASTIC_TRAY_ORIENTATION : REAL := 0; (*********************************)
+	MAX_NUMBER_X_PAPER : USINT := 6; (*Maximum number of paper cups in x-direction of robot. Needs to be set depending on tray dimensions.*)
+	MAX_NUMBER_Y_PAPER : USINT := 2; (*Maximum number of paper cups in y-direction of robot. Needs to be set depending on tray dimensions.*)
+	DIST_X_PAPER_CENTR_SAME_ROW : REAL := 105;
+	DIST_X_PAPER_CENTR_DIFF_ROW : REAL := 55;
+	DIST_Y_PAPER_CENTR : REAL := 87;
+	PAPER_TRAY_ORIENTATION : REAL := 0;
+END_VAR
+VAR
+	x_counter_plastic : INT := 0;
+	y_counter_plastic : INT := 0;
+	x_counter_paper : INT := 0;
+	y_counter_paper : INT := 0;
+	TRAYS_Refilling : BOOL := FALSE;
+	Assem_PlasticRemaining : USINT := 39;
+	Assem_PlasticTraySize : USINT := 39;
+	Assem_PaperTraySize : USINT := 39;
+	Assem_PaperRemaining : USINT := 39;
+	Counter_GrabbingCups_Timeout : TON;
+END_VAR
+(*
+ ********************************************************************
+ *Supertrak Shutlle Positions
+ ********************************************************************)
+VAR
+	Supertrak_Above_Position : ARRAY[0..5] OF LREAL;
+	Supertrak_Position : ARRAY[0..5] OF LREAL := [470,18.21,300,0,180,0];
+END_VAR
+(*
+ ********************************************************************
+ *Pallet Supply Position and variables
+ ********************************************************************)
+VAR
+	Small_Pellet_Supply_Pos : ARRAY[0..5] OF LREAL := [-610.43150963274229,88.409709500481057,72.116218443399376,165.77143847388669,-2.42613204529352,20.469152090418127];
+	Small_Pellet_Supply_Pos_Before : ARRAY[0..5] OF LREAL;
+	Small_Pellet_Intermediate1_Pos : ARRAY[0..5] OF LREAL := [200,406.6,370,0,180,0];
+	Small_Pellet_Intermediate2_Pos : ARRAY[0..5] OF LREAL := [-200,406.6,370,0,180,0];
+END_VAR
+(*
+ ********************************************************************
+ *Home Positions
+ ********************************************************************)
+VAR
+	Comau_Resetting_Poition : ARRAY[0..5] OF LREAL := [0,0,-90,0,90,0];
+	Home_Position : ARRAY[0..5] OF LREAL := [355.939,0,468.998,0,180,0];
+	HomeRobot : BOOL := FALSE; (*TRUE TO home the robot again only in stopped (home mode must be TRUE also)*)
+END_VAR
+(*
+ ********************************************************************
+ *OPC UA GUI Variables
+ ********************************************************************)
+VAR
+	Maintenance_Requested : BOOL := FALSE;
+	Assem_IgnoreSafetySensors : BOOL := FALSE;
+END_VAR

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.3.86 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">QACheck_Aborting.st</Object>
+    <Object Type="File">QACheck_Aborted.st</Object>
+    <Object Type="File">QACheck_Stopping.st</Object>
+    <Object Type="File">QACheck_Stopped.st</Object>
+    <Object Type="File">QACheck_Clearing.st</Object>
+    <Object Type="File">QACheck_Idle.st</Object>
+    <Object Type="File">QACheck_Starting.st</Object>
+    <Object Type="File">QACheck_Completing.st</Object>
+    <Object Type="File">QACheck_Complete.st</Object>
+    <Object Type="File">QACheck_Resetting.st</Object>
+    <Object Type="File">QACheck_Held.st</Object>
+    <Object Type="File">QACheck_Unholding.st</Object>
+    <Object Type="File">QACheck_Suspending.st</Object>
+    <Object Type="File">QACheck_Suspended.st</Object>
+    <Object Type="File">QACheck_Unsuspending.st</Object>
+    <Object Type="File">QACheck_Pausing.st</Object>
+    <Object Type="File">QACheck_Paused.st</Object>
+    <Object Type="File">QACheck_Running.st</Object>
+    <Object Type="File">QACheck_Holding.st</Object>
+  </Objects>
+</Package>

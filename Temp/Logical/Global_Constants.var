@@ -1,0 +1,30 @@
+(* ******************************************************************************** *)
+VAR CONSTANT
+	CONFIG_SUPERTRAK_LENGTH : DINT := 6020; (* Supertrak Length for Simulation *)
+	CONFIG_SECTION_LENGTH : DINT := 1000; (* Section Length in mm *)
+END_VAR
+(* ******************************************************************************** *)
+(* ******************************************************************************** *)
+(* Lifebit Timeout *)
+(* ******************************************************************************** *)
+VAR CONSTANT
+	LIFEBIT_TIMEOUT : TIME := T#5000ms;
+	SUPERTRAK_MAX_COMMANDS_DIV_8_M1 : USINT := 5; (*M1=Minus one*)
+	SUPERTRAK_MAX_IOS : USINT := 128;
+	SUPERTRAK_MAX_IOS_DIV_8_M1 : USINT := 15; (*M1=Minus one*)
+	SUPERTRAK_MAX_SECTIONS : USINT := 6;
+	SUPERTRAK_MAX_SHUTTLES : USINT := 16;
+	SUPERTRAK_MAX_SECTIONS_MINUS_1 : USINT := 5;
+	SUPERTRAK_MAX_TARGETS : USINT := 128;
+	SUPERTRAK_MAX_TARGETS_MINUS_1 : USINT := 127;
+	SUPERTRAK_MAX_TARGETS_DIV_4_M1 : USINT := 31; (*M1=Minus one*)
+	SUPERTRAK_SHUTTLES : USINT := 6;
+	SUPERTRAK_SECTIONS : USINT := 6;
+	SUPERTRAK_TARGETS : USINT := 8;
+	SUPERTRAK_MAX_COMMANDS_MINUS_1 : USINT := 47;
+END_VAR
+(* SuperTrak Constants *)
+(* ******************************************************************************** *)
+VAR CONSTANT
+	SUPERTRAK_MAX_COMMANDS : USINT := 48;
+END_VAR

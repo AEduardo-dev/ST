@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.3.86 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">goHome_Aborting.st</Object>
+    <Object Type="File">goHome_Aborted.st</Object>
+    <Object Type="File">goHome_Stopping.st</Object>
+    <Object Type="File">goHome_Stopped.st</Object>
+    <Object Type="File">goHome_Clearing.st</Object>
+    <Object Type="File">goHome_Idle.st</Object>
+    <Object Type="File">goHome_Starting.st</Object>
+    <Object Type="File">goHome_Completing.st</Object>
+    <Object Type="File">goHome_Complete.st</Object>
+    <Object Type="File">goHome_Resetting.st</Object>
+    <Object Type="File">goHome_Holding.st</Object>
+    <Object Type="File">goHome_Held.st</Object>
+    <Object Type="File">goHome_Unholding.st</Object>
+    <Object Type="File">goHome_Suspending.st</Object>
+    <Object Type="File">goHome_Suspended.st</Object>
+    <Object Type="File">goHome_Unsuspending.st</Object>
+    <Object Type="File">goHome_Pausing.st</Object>
+    <Object Type="File">goHome_Paused.st</Object>
+    <Object Type="File">goHome_Running.st</Object>
+    <Object Type="File">goHome_StateErrorReset.st</Object>
+  </Objects>
+</Package>

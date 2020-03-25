@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.3.86 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Outfeed_Aborting.st</Object>
+    <Object Type="File">Outfeed_Aborted.st</Object>
+    <Object Type="File">Outfeed_Stopping.st</Object>
+    <Object Type="File">Outfeed_Stopped.st</Object>
+    <Object Type="File">Outfeed_Clearing.st</Object>
+    <Object Type="File">Outfeed_Idle.st</Object>
+    <Object Type="File">Outfeed_Starting.st</Object>
+    <Object Type="File">Outfeed_Completing.st</Object>
+    <Object Type="File">Outfeed_Complete.st</Object>
+    <Object Type="File">Outfeed_Resetting.st</Object>
+    <Object Type="File">Outfeed_Holding.st</Object>
+    <Object Type="File">Outfeed_Held.st</Object>
+    <Object Type="File">Outfeed_Unholding.st</Object>
+    <Object Type="File">Outfeed_Suspending.st</Object>
+    <Object Type="File">Outfeed_Suspended.st</Object>
+    <Object Type="File">Outfeed_Unsuspending.st</Object>
+    <Object Type="File">Outfeed_Pausing.st</Object>
+    <Object Type="File">Outfeed_Paused.st</Object>
+    <Object Type="File">Outfeed_Running.st</Object>
+  </Objects>
+</Package>

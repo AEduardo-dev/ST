@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.3.86 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">provideCup_Aborting.st</Object>
+    <Object Type="File">provideCup_Aborted.st</Object>
+    <Object Type="File">provideCup_Stopping.st</Object>
+    <Object Type="File">provideCup_Stopped.st</Object>
+    <Object Type="File">provideCup_Clearing.st</Object>
+    <Object Type="File">provideCup_Idle.st</Object>
+    <Object Type="File">provideCup_Starting.st</Object>
+    <Object Type="File">provideCup_Completing.st</Object>
+    <Object Type="File">provideCup_Complete.st</Object>
+    <Object Type="File">provideCup_Resetting.st</Object>
+    <Object Type="File">provideCup_Holding.st</Object>
+    <Object Type="File">provideCup_Held.st</Object>
+    <Object Type="File">provideCup_Unholding.st</Object>
+    <Object Type="File">provideCup_Suspending.st</Object>
+    <Object Type="File">provideCup_Suspended.st</Object>
+    <Object Type="File">provideCup_Unsuspending.st</Object>
+    <Object Type="File">provideCup_Pausing.st</Object>
+    <Object Type="File">provideCup_Paused.st</Object>
+    <Object Type="File">provideCup_Running.st</Object>
+  </Objects>
+</Package>

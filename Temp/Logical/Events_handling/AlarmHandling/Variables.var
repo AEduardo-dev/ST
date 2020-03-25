@@ -1,0 +1,11 @@
+VAR
+	i : USINT;
+	iEvent : USINT := 0;
+END_VAR
+(********************************************************************************************)
+(* Variables for Service Stations *)
+(********************************************************************************************)
+VAR
+	PalletAtServiceBlister : BOOL := FALSE;
+	PalletAtServiceLid : BOOL := FALSE;
+END_VAR

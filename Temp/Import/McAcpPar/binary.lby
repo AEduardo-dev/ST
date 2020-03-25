@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.0.0?>
+<Library Version="5.07.1" xmlns="http://br-automation.co.at/AS/Library" Description="[mapp Motion] ACOPOS parameter ID library">
+  <Files>
+    <File>McAcpPar.var</File>
+    <File></File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="McBase" FromVersion="5.07.0" ToVersion="5.07.9" />
+  </Dependencies>
+</Library>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.3.4.121 SP?>
+<Library xmlns="http://br-automation.co.at/AS/Library" Version="5.07.1" Description="[mapp Motion] Robotics library">
+  <Objects>
+    <Object Type="File">MpRobotics.typ</Object>
+    <Object Type="File">MpRoboticsError.typ</Object>
+    <Object Type="File">MpRobotics.fun</Object>
+  </Objects>
+  <Dependencies>
+    <Dependency ObjectName="McAxGroup" FromVersion="5.07.0" ToVersion="5.07.9"/>
+    <Dependency ObjectName="MpBase" FromVersion="5.07.0" ToVersion="5.07.9"/>
+  </Dependencies>
+</Library>

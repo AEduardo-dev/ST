@@ -1,0 +1,39 @@
+(* ============================================================
+Variable for known events definition
+   ============================================================ *)
+VAR
+	Events : ARRAY[0..250] OF Event_Codes_Typ;
+	Event_Code : UINT;
+END_VAR
+(*******************************************************************
+ * Variables of program EventLog
+ ********************************************************************)
+VAR
+	EventLog : EventLog_typ; (*Event handling.*)
+END_VAR
+(*=============================================================*)
+(*Variables for info events writing control*)
+(*=============================================================*)
+VAR
+	Write_Info : BOOL;
+	ST_Last_Info_Written : UINT;
+	Assembly_Last_Info_Written : UINT;
+	General_Last_Info_Written : UINT;
+	Last_Event_Written : UINT;
+	Set_Info_Messages : BOOL;
+	Restart_Status : UINT;
+	Initialization : BOOL;
+END_VAR
+(*=============================================================*)
+(*Flags for new events *)
+(*=============================================================*)
+VAR
+	Info_Event : BOOL;
+	New_Event : BOOL;
+END_VAR
+(********************************************************************************************)
+(* Variables for Error Detection *)
+(********************************************************************************************)
+VAR
+	SumCritical : BOOL;
+END_VAR

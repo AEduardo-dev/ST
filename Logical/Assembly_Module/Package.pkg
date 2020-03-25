@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.3.86 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Program" Language="IEC">AssemblyInterface</Object>
+    <Object Type="Program" Language="IEC">MainControl</Object>
+    <Object Type="Program" Language="IEC">DisableBrake</Object>
+    <Object Type="File" Description="Global variables">Assembly_Global.var</Object>
+    <Object Type="File" Description="Global data types">MNG_Global.typ</Object>
+    <Object Type="File" Description="Global variables">MNG_Global.var</Object>
+    <Object Type="Program" Language="IEC" Description="Programm">MNG_Interface</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.3.86 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Aborting.st</Object>
+    <Object Type="File">Aborted.st</Object>
+    <Object Type="File">Clearing.st</Object>
+    <Object Type="File">Stopped.st</Object>
+    <Object Type="File">Stopping.st</Object>
+    <Object Type="File">Resetting.st</Object>
+    <Object Type="File">Idle.st</Object>
+    <Object Type="File">Starting.st</Object>
+    <Object Type="File">Holding.st</Object>
+    <Object Type="File">Held.st</Object>
+    <Object Type="File">Unholding.st</Object>
+    <Object Type="File">Running.st</Object>
+    <Object Type="File">Pausing.st</Object>
+    <Object Type="File">Suspending.st</Object>
+    <Object Type="File">Paused.st</Object>
+    <Object Type="File">Suspended.st</Object>
+    <Object Type="File">Unsuspending.st</Object>
+    <Object Type="File">Completing.st</Object>
+    <Object Type="File">Complete.st</Object>
+  </Objects>
+</Package>

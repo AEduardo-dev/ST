@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.3.86 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">checkParking_Aborting.st</Object>
+    <Object Type="File">checkParking_Aborted.st</Object>
+    <Object Type="File">checkParking_Stopping.st</Object>
+    <Object Type="File">checkParking_Stopped.st</Object>
+    <Object Type="File">checkParking_Clearing.st</Object>
+    <Object Type="File">checkParking_Idle.st</Object>
+    <Object Type="File">checkParking_Starting.st</Object>
+    <Object Type="File">checkParking_Completing.st</Object>
+    <Object Type="File">checkParking_Complete.st</Object>
+    <Object Type="File">checkParking_Resetting.st</Object>
+    <Object Type="File">checkParking_Holding.st</Object>
+    <Object Type="File">checkParking_Held.st</Object>
+    <Object Type="File">checkParking_Unholding.st</Object>
+    <Object Type="File">checkParking_Suspending.st</Object>
+    <Object Type="File">checkParking_Suspended.st</Object>
+    <Object Type="File">checkParking_Unsuspending.st</Object>
+    <Object Type="File">checkParking_Pausing.st</Object>
+    <Object Type="File">checkParking_Paused.st</Object>
+    <Object Type="File">checkParking_Running.st</Object>
+  </Objects>
+</Package>

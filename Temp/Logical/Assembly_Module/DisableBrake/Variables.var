@@ -1,0 +1,9 @@
+VAR
+	fbMC_BR_Q3_BrakeOff : MC_BR_ProcessParID_AcpAx;
+	fbMC_BR_ProcessParID_AcpAx : ARRAY[0..3] OF MC_BR_ProcessParID_AcpAx;
+	ParIDType : McAcpAxProcessParIDType;
+	DisableBrake : USINT;
+	i : USINT;
+	BrakeOff : McAcpAxProcessParIDType;
+	BrakeOffTime : REAL := 1.0;
+END_VAR

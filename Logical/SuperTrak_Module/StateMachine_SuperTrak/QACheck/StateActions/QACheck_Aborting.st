@@ -1,0 +1,34 @@
+
+ACTION QACheck_Aborting:
+
+//	IF NOT Transition_From_Stopped AND gSuperTrak.state.stateMachine.operationalState <> ABORTING THEN
+//		Event_Code := 77;
+//		EventLog.Commands.WriteUserEvent := TRUE;
+//	END_IF;
+//	
+	
+
+	//Not knowing if any trigger was set to true before the abort we make sure every one of them is false before going to aborted	
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.abort 		:= FALSE;
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.clear 		:= FALSE;
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.hold 		:= FALSE;
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.pause 		:= FALSE;
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.reset 		:= FALSE;
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.resume 		:= FALSE;
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.start 		:= FALSE;
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.stop 		:= FALSE;
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.suspend 	:= FALSE;
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.unhold 		:= FALSE;
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.unsuspend 	:= FALSE;
+	
+	LED_Red   := TRUE;
+	LED_Green := FALSE; 
+	LED_Blue  := FALSE;
+	QA_Actuator_UP := FALSE;
+	
+	QA_Actuator_DOWN := FALSE;
+	
+	Skills_Aborted := Skills_Aborted + 1;
+	gSuperTrak.skill.QACheck.state.stateMachine.operationalState := ABORTED;
+
+END_ACTION

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="Main" height="600" width="700" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="SuperTrak" top="60" left="140" width="140" zIndex="0" text="SuperTrak Module" textAlign="center" />
+    <Widget xsi:type="widgets.brease.Label" id="Assembly" top="60" left="420" width="140" zIndex="1" text="Assembly Module" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="StStateOutput" top="140" left="120" width="180" zIndex="2" value="" textAlign="center" />
+    <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput2" top="140" left="400" width="180" zIndex="3" value="" textAlign="center" />
+    <Widget xsi:type="widgets.brease.PushButton" id="Abort_Button" top="320" left="240" width="220" height="60" zIndex="4" text="ABORT SYSTEM" />
+  </Widgets>
+</Content>

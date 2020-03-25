@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="Navigation" height="450" width="100" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.NavigationBar" id="NavigationBar1" top="0" left="0" width="100" height="460" zIndex="0">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.NavigationButton" id="MainPageNavigation" top="20" left="0" zIndex="0" multiLine="true" pageId="Main" text="System Overview" wordWrap="true" bold="true" italic="false" />
+        <Widget xsi:type="widgets.brease.NavigationButton" id="AssemblyMaintenanceNavigation1" top="80" left="0" zIndex="1" multiLine="true" pageId="Assembly_Maintenance" text="Assembly" wordWrap="true" bold="true" italic="false" />
+        <Widget xsi:type="widgets.brease.NavigationButton" id="SupertrakMaintenanceNavigation" top="140" left="0" zIndex="2" multiLine="true" pageId="Supertrak_Maintenance" text="SuperTrak" wordWrap="true" bold="true" italic="false" />
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.5.3.86 SP?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">moveShuttle_Aborting.st</Object>
+    <Object Type="File">moveShuttle_Aborted.st</Object>
+    <Object Type="File">moveShuttle_Stopping.st</Object>
+    <Object Type="File">moveShuttle_Stopped.st</Object>
+    <Object Type="File">moveShuttle_Clearing.st</Object>
+    <Object Type="File">moveShuttle_Idle.st</Object>
+    <Object Type="File">moveShuttle_Starting.st</Object>
+    <Object Type="File">moveShuttle_Completing.st</Object>
+    <Object Type="File">moveShuttle_Complete.st</Object>
+    <Object Type="File">moveShuttle_Resetting.st</Object>
+    <Object Type="File">moveShuttle_Holding.st</Object>
+    <Object Type="File">moveShuttle_Held.st</Object>
+    <Object Type="File">moveShuttle_Unholding.st</Object>
+    <Object Type="File">moveShuttle_Suspending.st</Object>
+    <Object Type="File">moveShuttle_Suspended.st</Object>
+    <Object Type="File">moveShuttle_Unsuspending.st</Object>
+    <Object Type="File">moveShuttle_Pausing.st</Object>
+    <Object Type="File">moveShuttle_Paused.st</Object>
+    <Object Type="File">moveShuttle_Running.st</Object>
+  </Objects>
+</Package>

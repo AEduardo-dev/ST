@@ -1,0 +1,94 @@
+WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName= 
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=60 Force=60 Index=33 ASCIIString=0
+                                    name                                     type force                                                            value level type len format place expand specs
+              Assembly_Last_Info_Written                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
+                                EventLog                             EventLog_typ    0 "                                                               *"    0   24    1    0    0    1         
+                                Commands                    EventLog_Commands_typ    0 "                                                               *"    1   24    1    0    0    1         
+                           CreateUserLog                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
+                           DeleteUserLog                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
+                          WriteUserEvent                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
+                         ReadLatestEvent                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
+                       ReadPreviousEvent                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
+                                    Data                        EventLog_Data_typ    0 "                                                               *"    1   24    1    0    0    1         
+                                    Step                                     DINT    0 "                                                               0"    2    4    1   10    0    0 e,0,STEP
+
+                                   Ident                                    UDINT    0 "                                                        26428676"    2    7    1   10    0    0        v
+                                StatusID                                     DINT    0 "                                                               0"    2    4    1   10    0    0         
+                      GetIdentOkNextStep                                     DINT    0 "                                                               9"    2    4    1   10    0    0 e,0,STEP
+
+                    GetIdentFailNextStep                                     DINT    0 "                                                             255"    2    4    1   10    0    0 e,0,STEP
+
+                                   Event                       EventLog_Event_typ    0 "                                                               *"    1   24    1    0    0    0         
+                                Severity                                    USINT    0 "                                                               1"    2    5    1   10    0    0         
+                                Customer                                     BOOL    0 "                                                            TRUE"    2    1    1    2    0    0         
+                                Facility                                     UINT    0 "                                                               0"    2    6    1   10    0    0         
+                                    Code                                     UINT    0 "                                                             128"    2    6    1   10    0    0         
+                                 EventID                                     DINT    0 "                                                               0"    2    4    1   10    0    0         
+                             ErrorNumber                                    UDINT    0 "                                                               0"    2    7    1   10    0    0         
+                               EnteredBy                               STRING[36]    0 "                                                      'Assembly'"    2    9   37    1    0    0         
+                                OriginID                                    UDINT    0 "                                                               0"    2    7    1   10    0    0        v
+                                RecordID                                    UDINT    0 "                                                              83"    2    7    1   10    0    0        v
+                               TimeStamp                  ArEventLogTimeStampType    0 "                                                               *"    2   24    1    0    0    0         
+                                     sec                                    UDINT    0 "                                                      1574161807"    3    7    1   10    0    0         
+                                    nsec                                    UDINT    0 "                                                               *"    3    7    1   10    0    0         
+                      AdditionalDataSize                                    UDINT    0 "                                                             121"    2    7    1   10    0    0         
+                    AdditionalDataFormat                                    USINT    0 "                                                               *"    2    5    1   10    0    0         
+                          AdditionalData                              STRING[255]    0 "                                                               *"    2    9  256    1    0    0         
+                              Event_Code                                     UINT    0 "                                                             250"    0    6    1   10    0    0         
+               General_Last_Info_Written                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
+                              Info_Event                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         
+                      Last_Event_Written                                     UINT    0 "                                                              78"    0    6    1   10    0    0         
+                               New_Event                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         
+                    ST_Last_Info_Written                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
+                       Set_Info_Messages                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         
+                         Life_Bit_Ignore                                     BOOL    0 "                                                            TRUE"    0    1    1    2    0    0         
+                           Mp_Parameters                    MpRoboArm6AxisParType    0 "                                                               *"    0   24    1    0    0    0         
+                             ProgramName                              STRING[260]    0 "                                                               *"    1    9  261    1    0    0         
+                      MoveProgramOptions                          McPrgAdvParType    0 "                                                               *"    1   24    1    0    0    0         
+                             InitProgram                              STRING[260]    0 "                                                               *"    2    9  261    1    0    0         
+                               StartMode                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mcPR
+
+                          StartPointType                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mcPR
+
+                     StartPointParameter                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                  RepositioningParameter                    McPrgAxesReposParType    0 "                                                               *"    2   24    1    0    0    0         
+                                    Type                                     DINT    0 "                                                               *"    3    4    1   10    0    0 e,0,mcPR
+
+                                  String                              STRING[260]    0 "                                                               *"    3    9  261    1    0    0         
+                         SaveRestartData                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,mcSW
+
+                                     Jog                    MpRoboArm6AxisJogType    0 "                                                               *"    1   24    1    0    0    0         
+                                Velocity                               REAL[0..5]    0 "                                                               *"    2    8    6    0    0    0         
+                             Velocity[0]                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                             Velocity[1]                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                             Velocity[2]                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                             Velocity[3]                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                             Velocity[4]                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                             Velocity[5]                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                              PathLimits                      McJogPathLimitsType    0 "                                                               *"    2   24    1    0    0    0         
+                                Velocity                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                            Acceleration                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                            Deceleration                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                                    Jerk                                     REAL    0 "                                                               *"    3    8    1   10    0    0         
+                             CoordSystem                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
+                                Position                              LREAL[0..5]    0 "                                                               *"    1   14    6    0    0    0         
+                             Position[0]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                             Position[1]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                             Position[2]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                             Position[3]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                             Position[4]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                             Position[5]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                                Distance                              LREAL[0..5]    0 "                                                               *"    1   14    6    0    0    0         
+                             Distance[0]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                             Distance[1]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                             Distance[2]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                             Distance[3]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                             Distance[4]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                             Distance[5]                                    LREAL    0 "                                                               *"    2   14    1   10    0    0         
+                                Velocity                                     REAL    0 "                                                               *"    1    8    1   10    0    0         
+                            Acceleration                                     REAL    0 "                                                               *"    1    8    1   10    0    0         
+                            Deceleration                                     REAL    0 "                                                               *"    1    8    1   10    0    0         
+                                    Jerk                                     REAL    0 "                                                               *"    1    8    1   10    0    0         
+                             CoordSystem                                    UDINT    0 "                                                               *"    1    7    1   10    0    0         
+                          ManualMoveType                                     DINT    0 "                                                               *"    1    4    1   10    0    0 e,0,mcMO
+

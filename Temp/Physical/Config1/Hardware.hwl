@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<BR.AS.HardwareTopology Version="0.0.0.1">
+  <Modules>
+    <Module Name="5PC910.SX02-00" Type="5PC910.SX02-00" X="144" Y="153" />
+    <Module Name="5AC901.BX02-01" Type="5AC901.BX02-01" X="203" Y="186" />
+    <Module Name="5LS182.6-2" Type="5LS182.6-2" X="208" Y="222" />
+    <Module Name="5ACPCE.FMIO-K01" Type="5ACPCE.FMIO-K01" X="208" Y="199" />
+    <Module Name="5PC900_TS77_04" Type="5PC900.TS77-04" X="203" Y="163" />
+    <Module Name="X20BB80" Type="X20BB80" X="838" Y="213" />
+    <Module Name="X20BM11" Type="X20BM11" X="876" Y="213" />
+    <Module Name="X20DI9371" Type="X20DI9371" X="876" Y="213" />
+    <Module Name="X20TB12" Type="X20TB12" X="876" Y="240" />
+    <Module Name="X20BM11a" Type="X20BM11" X="889" Y="213" />
+    <Module Name="X20DO9322" Type="X20DO9322" X="889" Y="213" />
+    <Module Name="X20TB12b" Type="X20TB12" X="889" Y="240" />
+    <Module Name="X20BM11c" Type="X20BM11" X="902" Y="213" />
+    <Module Name="X20DI9371a" Type="X20DI9371" X="902" Y="213" />
+    <Module Name="X20TB12d" Type="X20TB12" X="902" Y="240" />
+    <Module Name="X20BM11b" Type="X20BM11" X="915" Y="213" />
+    <Module Name="X20DO9322a" Type="X20DO9322" X="915" Y="213" />
+    <Module Name="X20TB12c" Type="X20TB12" X="915" Y="240" />
+    <Module Name="X20PS9400" Type="X20PS9400" X="863" Y="213" />
+    <Module Name="X20TB12a" Type="X20TB12" X="863" Y="240" />
+    <Module Name="X20BC0083" Type="X20BC0083" X="838" Y="213" />
+    <Module Name="8EI8X8HWT10.0500-1" Type="8EI8X8HWT10.0500-1" X="508" Y="243" />
+    <Module Name="8EI8X8HWT10.0500-1a" Type="8EI8X8HWT10.0500-1" X="604" Y="243" />
+  </Modules>
+  <Links>
+    <Link From="5LS182.6-2" To="8EI8X8HWT10.0500-1" FromPort="IF1" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="515.7" Y="253.5" />
+      <Point X="515.7" Y="253.5" />
+      <Point X="507.7" Y="253.5" />
+      <Point X="495" Y="253.5" />
+      <Point X="495" Y="205" />
+      <Point X="325" Y="205" />
+      <Point X="325" Y="230" />
+      <Point X="259" Y="230" />
+      <Point X="249" Y="230" />
+      <Point X="249" Y="230" />
+    </Link>
+    <Link From="8EI8X8HWT10.0500-1" To="8EI8X8HWT10.0500-1a" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="611.9" Y="253.5" />
+      <Point X="611.9" Y="253.5" />
+      <Point X="603.9" Y="253.5" />
+      <Point X="595" Y="253.5" />
+      <Point X="595" Y="235" />
+      <Point X="524.1001" Y="235" />
+      <Point X="524.1001" Y="242.5" />
+      <Point X="524.1001" Y="253.5" />
+      <Point X="524.1001" Y="253.5" />
+    </Link>
+    <Link From="8EI8X8HWT10.0500-1a" To="X20BC0083" FromPort="PLK2" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="620.1" Y="253.5" />
+      <Point X="620.1" Y="253.5" />
+      <Point X="620.1" Y="242.5" />
+      <Point X="620.1" Y="235" />
+      <Point X="665" Y="235" />
+      <Point X="665" Y="288" />
+      <Point X="837" Y="288" />
+      <Point X="852" Y="288" />
+      <Point X="852" Y="288" />
+    </Link>
+  </Links>
+  <InfoElements>
+    <InfoElementText Id="Textbox_1" X="421.976746" Y="551.6582" Width="132.223267" Height="272.3418">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">ST1:
+Channel1: Q1
+Channel2: Q3
+Channel3: Q5</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+    <InfoElementText Id="Textbox_2" X="602.787842" Y="551.6582" Width="132.223267" Height="270.3418">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">ST2:
+Channel1: Q2
+Channel2: Q4
+Channel3: Q6</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+  </InfoElements>
+</BR.AS.HardwareTopology>

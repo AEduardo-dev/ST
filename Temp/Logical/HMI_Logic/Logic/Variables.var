@@ -1,0 +1,8 @@
+VAR
+	HMI_Assembly_State_String : STRING[80] := '';
+	HMI_ST_State_String : STRING[80];
+	HMI_Assembly_Paper_Cup_Refill : BOOL;
+	HMI_Assembly_Maintenance_Done : BOOL;
+	HMI_Assembly_Plastic_Cup_Refill : BOOL;
+	HMI_Abort_System : BOOL;
+END_VAR

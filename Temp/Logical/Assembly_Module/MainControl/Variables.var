@@ -1,0 +1,57 @@
+(*
+ *******************************************************************************************************************************************************
+ * GENERAL MAIN CONTROL VARIABLES AND CONSTANTS
+ *******************************************************************************************************************************************************
+ *******************************************************************************************************************************************************)
+(*
+ ********************************************************************
+ * Cases variables
+ ********************************************************************)
+VAR
+	Clearing_Case : Clearing_CaseEnum := POWERON;
+	Stopped_Case : Stopped_CaseEnum := GENERAL_STOPPED;
+	providePellet_Case : providePellet_CaseEnum := CUP_SUPPLY_DECISION_CASE;
+	provideCup_Case : provideCup_CaseEnum := CUP_SUPPLY_DECISION_CASE;
+END_VAR
+(*
+ ********************************************************************
+ *Cup Tray Variables
+ ********************************************************************)
+VAR
+	Counter_GrabbingCups_Timeout : TON;
+END_VAR
+(*
+ ********************************************************************
+ *Supertrak Shutlle Variables
+ ********************************************************************)
+VAR
+	Counter_LeavingCups_Timeout : TON;
+	Counter_LeavingPellets_Timeout : TON;
+END_VAR
+(*
+ ********************************************************************
+ *Pallet Supply Variables
+ ********************************************************************)
+VAR
+	Counter_GrabbingPellets_Timeout : TON;
+END_VAR
+(*
+ ********************************************************************
+ *Home Variables
+ ********************************************************************)
+VAR
+	Home_Mode : BOOL := FALSE; (*false for restore pos as homing mode, true for direct home*)
+END_VAR
+VAR RETAIN
+	ResPos : ARRAY[0..5] OF McAcpAxRestorePosType := [6((0))];
+END_VAR
+(*
+ ********************************************************************
+ * Other variables
+ ********************************************************************)
+VAR
+	TransitionFromStopped : BOOL;
+	Counter_Clearing_Timeout : TON;
+	Maintenance_Done : BOOL;
+	i : INT;
+END_VAR

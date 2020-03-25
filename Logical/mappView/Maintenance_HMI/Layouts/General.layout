@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ldef:Layout id="General" height="600" width="800" xmlns:ldef="http://www.br-automation.com/iat2015/layoutDefinition/v2">
+  <Areas>
+		<Area id="BackGround" height="600" width="800" left="0" top="0" />
+		<Area id="MainArea" height="600" width="700" left="100" top="0" />
+		<Area id="NavigationArea" height="450" width="100" left="0" top="0" />
+  </Areas>
+</ldef:Layout>

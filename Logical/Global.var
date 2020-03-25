@@ -1,0 +1,6 @@
+VAR
+	Life_Bit_Ignore : BOOL := TRUE; (*Flag for simulation without life bit acknowledge from the MES*)
+	TON_AssemblyLifeBit : TON;
+	Ack : USINT;
+	TON_SuperTrakLifeBit : TON;
+END_VAR

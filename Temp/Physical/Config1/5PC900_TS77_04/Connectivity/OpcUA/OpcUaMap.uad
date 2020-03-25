@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OpcUaSource FileVersion="4" ArVersion="D4.52">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="gAssemblyModule">
+          <Variable Name="identification">
+            <Variable Name="deviceName" />
+            <Variable Name="manufacturer" />
+            <Variable Name="serialNumber" />
+          </Variable>
+          <Variable Name="state">
+            <Variable Name="errorAcknowledge" />
+            <Variable Name="stateMachine">
+              <Variable Name="operationalState" />
+              <Variable Name="operationalStateError" />
+              <Variable Name="stateTransition">
+                <Variable Name="start" />
+                <Variable Name="pause" />
+                <Variable Name="resume" />
+                <Variable Name="suspend" />
+                <Variable Name="unsuspend" />
+                <Variable Name="hold" />
+                <Variable Name="unhold" />
+                <Variable Name="stop" />
+                <Variable Name="abort" />
+                <Variable Name="clear" />
+                <Variable Name="reset" />
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="skill">
+            <Variable Name="goHome">
+              <Variable Name="USID" />
+              <Variable Name="name" />
+              <Variable Name="state">
+                <Variable Name="stateMachine">
+                  <Variable Name="operationalState" />
+                  <Variable Name="operationalStateError" />
+                  <Variable Name="stateTransition">
+                    <Variable Name="start" />
+                    <Variable Name="pause" />
+                    <Variable Name="resume" />
+                    <Variable Name="suspend" />
+                    <Variable Name="unsuspend" />
+                    <Variable Name="hold" />
+                    <Variable Name="unhold" />
+                    <Variable Name="stop" />
+                    <Variable Name="abort" />
+                    <Variable Name="clear" />
+                    <Variable Name="reset" />
+                  </Variable>
+                </Variable>
+              </Variable>
+            </Variable>
+            <Variable Name="providePellet">
+              <Variable Name="USID" />
+              <Variable Name="name" />
+              <Variable Name="inputParameters">
+                <Variable Name="pelletType" />
+              </Variable>
+              <Variable Name="state">
+                <Variable Name="stateMachine">
+                  <Variable Name="operationalState" />
+                  <Variable Name="operationalStateError" />
+                  <Variable Name="stateTransition">
+                    <Variable Name="start" />
+                    <Variable Name="pause" />
+                    <Variable Name="resume" />
+                    <Variable Name="suspend" />
+                    <Variable Name="unsuspend" />
+                    <Variable Name="hold" />
+                    <Variable Name="unhold" />
+                    <Variable Name="stop" />
+                    <Variable Name="abort" />
+                    <Variable Name="clear" />
+                    <Variable Name="reset" />
+                  </Variable>
+                </Variable>
+              </Variable>
+            </Variable>
+            <Variable Name="provideCup">
+              <Variable Name="USID" />
+              <Variable Name="name" />
+              <Variable Name="inputParameters">
+                <Variable Name="cupType" />
+              </Variable>
+              <Variable Name="OutputParameters">
+                <Variable Name="FirstOutputParam" />
+                <Variable Name="SecondOutputParam" />
+              </Variable>
+              <Variable Name="state">
+                <Variable Name="stateMachine">
+                  <Variable Name="operationalState" />
+                  <Variable Name="operationalStateError" />
+                  <Variable Name="stateTransition">
+                    <Variable Name="start" />
+                    <Variable Name="pause" />
+                    <Variable Name="resume" />
+                    <Variable Name="suspend" />
+                    <Variable Name="unsuspend" />
+                    <Variable Name="hold" />
+                    <Variable Name="unhold" />
+                    <Variable Name="stop" />
+                    <Variable Name="abort" />
+                    <Variable Name="clear" />
+                    <Variable Name="reset" />
+                  </Variable>
+                </Variable>
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="lifeBit">
+            <Variable Name="lifeBitAck" />
+          </Variable>
+        </Variable>
+        <Variable Name="gSuperTrak">
+          <Variable Name="identification">
+            <Variable Name="deviceName" />
+            <Variable Name="manufacturer" />
+            <Variable Name="serialNumber" />
+          </Variable>
+          <Variable Name="state">
+            <Variable Name="errorAcknowledge" />
+            <Variable Name="stateMachine">
+              <Variable Name="operationalState" />
+              <Variable Name="operationalStateError" />
+              <Variable Name="stateTransition">
+                <Variable Name="start" />
+                <Variable Name="pause" />
+                <Variable Name="resume" />
+                <Variable Name="suspend" />
+                <Variable Name="unsuspend" />
+                <Variable Name="hold" />
+                <Variable Name="unhold" />
+                <Variable Name="stop" />
+                <Variable Name="abort" />
+                <Variable Name="clear" />
+                <Variable Name="reset" />
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="skill">
+            <Variable Name="moveShuttle" EnableArrayElements="True" />
+            <Variable Name="checkParking">
+              <Variable Name="USID" />
+              <Variable Name="name" />
+              <Variable Name="outputParameters">
+                <Variable Name="shuttleId" />
+              </Variable>
+              <Variable Name="state">
+                <Variable Name="stateMachine">
+                  <Variable Name="operationalState" />
+                  <Variable Name="operationalStateError" />
+                  <Variable Name="stateTransition">
+                    <Variable Name="start" />
+                    <Variable Name="pause" />
+                    <Variable Name="resume" />
+                    <Variable Name="suspend" />
+                    <Variable Name="unsuspend" />
+                    <Variable Name="hold" />
+                    <Variable Name="unhold" />
+                    <Variable Name="stop" />
+                    <Variable Name="abort" />
+                    <Variable Name="clear" />
+                    <Variable Name="reset" />
+                  </Variable>
+                </Variable>
+              </Variable>
+            </Variable>
+            <Variable Name="QACheck">
+              <Variable Name="USID" />
+              <Variable Name="name" />
+              <Variable Name="state">
+                <Variable Name="stateMachine">
+                  <Variable Name="operationalState" />
+                  <Variable Name="operationalStateError" />
+                  <Variable Name="stateTransition">
+                    <Variable Name="start" />
+                    <Variable Name="pause" />
+                    <Variable Name="resume" />
+                    <Variable Name="suspend" />
+                    <Variable Name="unsuspend" />
+                    <Variable Name="hold" />
+                    <Variable Name="unhold" />
+                    <Variable Name="stop" />
+                    <Variable Name="abort" />
+                    <Variable Name="clear" />
+                    <Variable Name="reset" />
+                  </Variable>
+                </Variable>
+              </Variable>
+            </Variable>
+            <Variable Name="Outfeed">
+              <Variable Name="USID" />
+              <Variable Name="name" />
+              <Variable Name="state">
+                <Variable Name="stateMachine">
+                  <Variable Name="operationalState" />
+                  <Variable Name="operationalStateError" />
+                  <Variable Name="stateTransition">
+                    <Variable Name="start" />
+                    <Variable Name="pause" />
+                    <Variable Name="resume" />
+                    <Variable Name="suspend" />
+                    <Variable Name="unsuspend" />
+                    <Variable Name="hold" />
+                    <Variable Name="unhold" />
+                    <Variable Name="stop" />
+                    <Variable Name="abort" />
+                    <Variable Name="clear" />
+                    <Variable Name="reset" />
+                  </Variable>
+                </Variable>
+              </Variable>
+            </Variable>
+          </Variable>
+          <Variable Name="lifeBit">
+            <Variable Name="lifeBitAck" />
+          </Variable>
+        </Variable>
+        <Variable Name="LIFEBIT_TIMEOUT" />
+        <Variable Name="Assem_IgnoreSafetySensors" />
+        <Variable Name="Life_Bit_Ignore" />
+      </GlobalVariables>
+      <Task Name="StateMachi">
+        <Variable Name="New_ID" />
+        <Variable Name="SetID" />
+        <Variable Name="transitionFromAborted" />
+        <Variable Name="MES_Test" />
+      </Task>
+      <Task Name="MainContro">
+        <Variable Name="Home_Mode" />
+        <Variable Name="Maintenance_Done" />
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>
