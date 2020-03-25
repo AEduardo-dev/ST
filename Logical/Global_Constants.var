@@ -22,6 +22,7 @@ VAR CONSTANT
 	SUPERTRAK_SECTIONS : USINT := 6;
 	SUPERTRAK_TARGETS : USINT := 8;
 	SUPERTRAK_MAX_COMMANDS_MINUS_1 : USINT := 47;
+	SUPERTRAK_SKILLS : USINT := 9;
 END_VAR
 (* SuperTrak Constants *)
 (* ******************************************************************************** *)

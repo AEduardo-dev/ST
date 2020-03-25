@@ -13,7 +13,7 @@ PROGRAM _INIT
  
  // SuperTrak initialization
 	IF DiagCpuIsSimulated() THEN
-		SuperTrakInit(TRUE,'/DEVICE=C:\GIT\Assembly_and_Supertrak\plc-code\SuperTrakUser');
+		SuperTrakInit(TRUE,'/DEVICE=D:\GIT\ST\SuperTrakUser');
 //		SuperTrakInit(TRUE,'/DEVICE=C:\Users\guelmez\Documents\Implementation\SuperTrakUser');
 	ELSE
 		//This is the user partition of the cf card used into the IPC

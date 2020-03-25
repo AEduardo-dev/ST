@@ -1,57 +1,23 @@
 WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=StateMachi 
-Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=71 Force=60 Index=45 ASCIIString=0
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=71 Force=60 Index=19 ASCIIString=0
                                     name                                     type force                                                            value level type len format place expand specs
-          ST_LightBarrier_SecurityOut1_R                                     BOOL    0 "                                                            TRUE"    0    1    1    2    0    0         
-          ST_LightBarrier_SecurityOut2_R                                     BOOL    0 "                                                            TRUE"    0    1    1    2    0    0         
-                                EventLog                             EventLog_typ    0 "                                                               *"    0   24    1    0    0    0         
-                                Commands                    EventLog_Commands_typ    0 "                                                               *"    1   24    1    0    0    0         
-                           CreateUserLog                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
-                           DeleteUserLog                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
-                          WriteUserEvent                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
-                         ReadLatestEvent                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
-                       ReadPreviousEvent                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
-                                    Data                        EventLog_Data_typ    0 "                                                               *"    1   24    1    0    0    0         
-                                    Step                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,STEP
-
-                                   Ident                                    UDINT    0 "                                                               *"    2    7    1   10    0    0        v
-                                StatusID                                     DINT    0 "                                                               *"    2    4    1   10    0    0         
-                      GetIdentOkNextStep                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,STEP
-
-                    GetIdentFailNextStep                                     DINT    0 "                                                               *"    2    4    1   10    0    0 e,0,STEP
-
-                                   Event                       EventLog_Event_typ    0 "                                                               *"    1   24    1    0    0    0         
-                                Severity                                    USINT    0 "                                                               *"    2    5    1   10    0    0         
-                                Customer                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
-                                Facility                                     UINT    0 "                                                               *"    2    6    1   10    0    0         
-                                    Code                                     UINT    0 "                                                               *"    2    6    1   10    0    0         
-                                 EventID                                     DINT    0 "                                                               *"    2    4    1   10    0    0         
-                             ErrorNumber                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
-                               EnteredBy                               STRING[36]    0 "                                                               *"    2    9   37    1    0    0         
-                                OriginID                                    UDINT    0 "                                                               *"    2    7    1   10    0    0        v
-                                RecordID                                    UDINT    0 "                                                               *"    2    7    1   10    0    0        v
-                               TimeStamp                  ArEventLogTimeStampType    0 "                                                               *"    2   24    1    0    0    0         
-                                     sec                                    UDINT    0 "                                                               *"    3    7    1   10    0    0         
-                                    nsec                                    UDINT    0 "                                                               *"    3    7    1   10    0    0         
-                      AdditionalDataSize                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
-                    AdditionalDataFormat                                    USINT    0 "                                                               *"    2    5    1   10    0    0         
-                          AdditionalData                              STRING[255]    0 "                                                               *"    2    9  256    1    0    0         
-                                MES_Test                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
-                          QA_Door_Closed                                     BOOL    0 "                                                               *"    0    1    1    2    0    0         
+          ST_LightBarrier_SecurityOut1_R                                     BOOL    2 "                                                            TRUE"    0    1    1    2    0    0         
+          ST_LightBarrier_SecurityOut2_R                                     BOOL    2 "                                                            TRUE"    0    1    1    2    0    0         
                              SumCritical                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         
-                         Life_Bit_Ignore                                     BOOL    0 "                                                            TRUE"    0    1    1    2    0    0         
-                   Outfeed_Actuator_BACK                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         
+                   Outfeed_Actuator_BACK                                     BOOL    3 "                                                            TRUE"    0    1    1    2    0    0         
                   Outfeed_Actuator_FRONT                                     BOOL    3 "                                                           FALSE"    0    1    1    2    0    0         
                    Outfeed_Actuator_DOWN                                     BOOL    3 "                                                            TRUE"    0    1    1    2    0    0         
                      Outfeed_Actuator_UP                                     BOOL    3 "                                                           FALSE"    0    1    1    2    0    0         
+                             QA_finished                                     BOOL    2 "                                                           FALSE"    0    1    1    2    1    0         
                               gSuperTrak                         opcSuperTrakType    0 "                                                               *"    0   24    1    0    0    1         
                           identification                    opcIdentificationType    0 "                                                               *"    1   24    1    0    0    0         
-                              deviceName                              STRING[255]    0 "                                                               *"    2    9  256    1    0    0         
-                            manufacturer                              STRING[255]    0 "                                                               *"    2    9  256    1    0    0         
+                              deviceName                              STRING[255]    0 "                                                              ''"    2    9  256    1    0    0         
+                            manufacturer                              STRING[255]    0 "                                                              ''"    2    9  256    1    0    0         
                             serialNumber                                    USINT    0 "                                                               *"    2    5    1   10    0    0         
                                    state                       opcModuleStateType    0 "                                                               *"    1   24    1    0    0    1         
                         errorAcknowledge                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
                             stateMachine                      opcStateMachineType    0 "                                                               *"    2   24    1    0    0    1         
-                        operationalState                                     DINT    0 "                                                              16"    3    4    1   10    0    0 e,0,IDLE
+                        operationalState                                     DINT    0 "                                                               2"    3    4    1   10    0    0 e,0,IDLE
 
                    operationalStateError                              STRING[255]    0 "                                                              ''"    3    9  256    1    0    0         
                          stateTransition                   opcStateTransitionType    0 "                                                               *"    3   24    1    0    0    1         
@@ -63,7 +29,7 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=71 Force=60 I
                                     hold                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
                                   unhold                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
                                     stop                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
-                                   abort                                     BOOL    0 "                                                            TRUE"    4    1    1    2    0    0         
+                                   abort                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
                                    clear                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
                                    reset                                     BOOL    0 "                                                           FALSE"    4    1    1    2    0    0         
                                    skill                  opcSkill_Supertrak_Type    0 "                                                               *"    1   24    1    0    0    1         
@@ -87,15 +53,15 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=71 Force=60 I
                                    abort                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
                                    clear                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
                                    reset                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
-                                 QACheck                    opcSkill_QACheck_Type    0 "                                                               *"    2   24    1    0    0    1         
+                                 QACheck                    opcSkill_QACheck_Type    0 "                                                               *"    2   24    1    0    0    0         
                                     USID                                    USINT    0 "                                                               0"    3    5    1   10    0    0         
                                     name                              STRING[255]    0 "                                                      'QA Check'"    3    9  256    1    0    0         
-                                   state                        opcSkillStateType    0 "                                                               *"    3   24    1    0    0    1         
-                            stateMachine                      opcStateMachineType    0 "                                                               *"    4   24    1    0    0    1         
-                        operationalState                                     DINT    0 "                                                               0"    5    4    1   10    0    0 e,0,IDLE
+                                   state                        opcSkillStateType    0 "                                                               *"    3   24    1    0    0    0         
+                            stateMachine                      opcStateMachineType    0 "                                                               *"    4   24    1    0    0    0         
+                        operationalState                                     DINT    0 "                                                              17"    5    4    1   10    0    0 e,0,IDLE
 
                    operationalStateError                              STRING[255]    0 "                                                              ''"    5    9  256    1    0    0         
-                         stateTransition                   opcStateTransitionType    0 "                                                               *"    5   24    1    0    0    1         
+                         stateTransition                   opcStateTransitionType    0 "                                                               *"    5   24    1    0    0    0         
                                    start                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
                                    pause                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
                                   resume                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
@@ -110,19 +76,19 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=71 Force=60 I
                              moveShuttle          opcSkill_moveShuttle_Type[0..5]    0 "                                                               *"    2   24    6    0    0    0    a,1,6
                           moveShuttle[0]                opcSkill_moveShuttle_Type    0 "                                                               *"    3   24    1    0    0    0         
                                     USID                                    USINT    0 "                                                               *"    4    5    1   10    0    0         
-                                    name                              STRING[255]    0 "                                                               *"    4    9  256    1    0    0         
+                                    name                              STRING[255]    0 "                                                              ''"    4    9  256    1    0    0         
                          inputParameters           opcSkill_moveShuttle_InParType    0 "                                                               *"    4   24    1    0    0    0         
                              finalTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                         outputParameters          opcSkill_moveShuttle_OutParType    0 "                                                               *"    4   24    1    0    0    0         
-                                      ID                               STRING[80]    0 "                                                               *"    5    9   81    1    0    0         
+                                      ID                               STRING[80]    0 "                                                              ''"    5    9   81    1    0    0         
                            currentTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                                    state                        opcSkillStateType    0 "                                                               *"    4   24    1    0    0    0         
                             stateMachine                      opcStateMachineType    0 "                                                               *"    5   24    1    0    0    0         
                         operationalState                                     DINT    0 "                                                               *"    6    4    1   10    0    0 e,0,IDLE
 
-                   operationalStateError                              STRING[255]    0 "                                                               *"    6    9  256    1    0    0         
+                   operationalStateError                              STRING[255]    0 "                                                              ''"    6    9  256    1    0    0         
                          stateTransition                   opcStateTransitionType    0 "                                                               *"    6   24    1    0    0    0         
                                    start                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                                    pause                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
@@ -137,19 +103,19 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=71 Force=60 I
                                    reset                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                           moveShuttle[1]                opcSkill_moveShuttle_Type    0 "                                                               *"    3   24    1    0    0    0         
                                     USID                                    USINT    0 "                                                               *"    4    5    1   10    0    0         
-                                    name                              STRING[255]    0 "                                                               *"    4    9  256    1    0    0         
+                                    name                              STRING[255]    0 "                                                              ''"    4    9  256    1    0    0         
                          inputParameters           opcSkill_moveShuttle_InParType    0 "                                                               *"    4   24    1    0    0    0         
                              finalTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                         outputParameters          opcSkill_moveShuttle_OutParType    0 "                                                               *"    4   24    1    0    0    0         
-                                      ID                               STRING[80]    0 "                                                               *"    5    9   81    1    0    0         
+                                      ID                               STRING[80]    0 "                                                              ''"    5    9   81    1    0    0         
                            currentTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                                    state                        opcSkillStateType    0 "                                                               *"    4   24    1    0    0    0         
                             stateMachine                      opcStateMachineType    0 "                                                               *"    5   24    1    0    0    0         
                         operationalState                                     DINT    0 "                                                               *"    6    4    1   10    0    0 e,0,IDLE
 
-                   operationalStateError                              STRING[255]    0 "                                                               *"    6    9  256    1    0    0         
+                   operationalStateError                              STRING[255]    0 "                                                              ''"    6    9  256    1    0    0         
                          stateTransition                   opcStateTransitionType    0 "                                                               *"    6   24    1    0    0    0         
                                    start                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                                    pause                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
@@ -164,19 +130,19 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=71 Force=60 I
                                    reset                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                           moveShuttle[2]                opcSkill_moveShuttle_Type    0 "                                                               *"    3   24    1    0    0    0         
                                     USID                                    USINT    0 "                                                               *"    4    5    1   10    0    0         
-                                    name                              STRING[255]    0 "                                                               *"    4    9  256    1    0    0         
+                                    name                              STRING[255]    0 "                                                              ''"    4    9  256    1    0    0         
                          inputParameters           opcSkill_moveShuttle_InParType    0 "                                                               *"    4   24    1    0    0    0         
                              finalTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                         outputParameters          opcSkill_moveShuttle_OutParType    0 "                                                               *"    4   24    1    0    0    0         
-                                      ID                               STRING[80]    0 "                                                               *"    5    9   81    1    0    0         
+                                      ID                               STRING[80]    0 "                                                              ''"    5    9   81    1    0    0         
                            currentTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                                    state                        opcSkillStateType    0 "                                                               *"    4   24    1    0    0    0         
                             stateMachine                      opcStateMachineType    0 "                                                               *"    5   24    1    0    0    0         
                         operationalState                                     DINT    0 "                                                               *"    6    4    1   10    0    0 e,0,IDLE
 
-                   operationalStateError                              STRING[255]    0 "                                                               *"    6    9  256    1    0    0         
+                   operationalStateError                              STRING[255]    0 "                                                              ''"    6    9  256    1    0    0         
                          stateTransition                   opcStateTransitionType    0 "                                                               *"    6   24    1    0    0    0         
                                    start                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                                    pause                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
@@ -191,19 +157,19 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=71 Force=60 I
                                    reset                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                           moveShuttle[3]                opcSkill_moveShuttle_Type    0 "                                                               *"    3   24    1    0    0    0         
                                     USID                                    USINT    0 "                                                               *"    4    5    1   10    0    0         
-                                    name                              STRING[255]    0 "                                                               *"    4    9  256    1    0    0         
+                                    name                              STRING[255]    0 "                                                              ''"    4    9  256    1    0    0         
                          inputParameters           opcSkill_moveShuttle_InParType    0 "                                                               *"    4   24    1    0    0    0         
                              finalTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                         outputParameters          opcSkill_moveShuttle_OutParType    0 "                                                               *"    4   24    1    0    0    0         
-                                      ID                               STRING[80]    0 "                                                               *"    5    9   81    1    0    0         
+                                      ID                               STRING[80]    0 "                                                              ''"    5    9   81    1    0    0         
                            currentTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                                    state                        opcSkillStateType    0 "                                                               *"    4   24    1    0    0    0         
                             stateMachine                      opcStateMachineType    0 "                                                               *"    5   24    1    0    0    0         
                         operationalState                                     DINT    0 "                                                               *"    6    4    1   10    0    0 e,0,IDLE
 
-                   operationalStateError                              STRING[255]    0 "                                                               *"    6    9  256    1    0    0         
+                   operationalStateError                              STRING[255]    0 "                                                              ''"    6    9  256    1    0    0         
                          stateTransition                   opcStateTransitionType    0 "                                                               *"    6   24    1    0    0    0         
                                    start                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                                    pause                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
@@ -218,19 +184,19 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=71 Force=60 I
                                    reset                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                           moveShuttle[4]                opcSkill_moveShuttle_Type    0 "                                                               *"    3   24    1    0    0    0         
                                     USID                                    USINT    0 "                                                               *"    4    5    1   10    0    0         
-                                    name                              STRING[255]    0 "                                                               *"    4    9  256    1    0    0         
+                                    name                              STRING[255]    0 "                                                              ''"    4    9  256    1    0    0         
                          inputParameters           opcSkill_moveShuttle_InParType    0 "                                                               *"    4   24    1    0    0    0         
                              finalTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                         outputParameters          opcSkill_moveShuttle_OutParType    0 "                                                               *"    4   24    1    0    0    0         
-                                      ID                               STRING[80]    0 "                                                               *"    5    9   81    1    0    0         
+                                      ID                               STRING[80]    0 "                                                              ''"    5    9   81    1    0    0         
                            currentTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                                    state                        opcSkillStateType    0 "                                                               *"    4   24    1    0    0    0         
                             stateMachine                      opcStateMachineType    0 "                                                               *"    5   24    1    0    0    0         
                         operationalState                                     DINT    0 "                                                               *"    6    4    1   10    0    0 e,0,IDLE
 
-                   operationalStateError                              STRING[255]    0 "                                                               *"    6    9  256    1    0    0         
+                   operationalStateError                              STRING[255]    0 "                                                              ''"    6    9  256    1    0    0         
                          stateTransition                   opcStateTransitionType    0 "                                                               *"    6   24    1    0    0    0         
                                    start                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                                    pause                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
@@ -245,19 +211,19 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=71 Force=60 I
                                    reset                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                           moveShuttle[5]                opcSkill_moveShuttle_Type    0 "                                                               *"    3   24    1    0    0    0         
                                     USID                                    USINT    0 "                                                               *"    4    5    1   10    0    0         
-                                    name                              STRING[255]    0 "                                                               *"    4    9  256    1    0    0         
+                                    name                              STRING[255]    0 "                                                              ''"    4    9  256    1    0    0         
                          inputParameters           opcSkill_moveShuttle_InParType    0 "                                                               *"    4   24    1    0    0    0         
                              finalTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                         outputParameters          opcSkill_moveShuttle_OutParType    0 "                                                               *"    4   24    1    0    0    0         
-                                      ID                               STRING[80]    0 "                                                               *"    5    9   81    1    0    0         
+                                      ID                               STRING[80]    0 "                                                              ''"    5    9   81    1    0    0         
                            currentTarget                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,1,Targ
 
                                    state                        opcSkillStateType    0 "                                                               *"    4   24    1    0    0    0         
                             stateMachine                      opcStateMachineType    0 "                                                               *"    5   24    1    0    0    0         
                         operationalState                                     DINT    0 "                                                               *"    6    4    1   10    0    0 e,0,IDLE
 
-                   operationalStateError                              STRING[255]    0 "                                                               *"    6    9  256    1    0    0         
+                   operationalStateError                              STRING[255]    0 "                                                              ''"    6    9  256    1    0    0         
                          stateTransition                   opcStateTransitionType    0 "                                                               *"    6   24    1    0    0    0         
                                    start                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                                    pause                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
@@ -271,34 +237,29 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=71 Force=60 I
                                    clear                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                                    reset                                     BOOL    0 "                                                               *"    7    1    1    2    0    0         
                             checkParking               opcSkill_checkParking_Type    0 "                                                               *"    2   24    1    0    0    0         
-                                    USID                                    USINT    0 "                                                               *"    3    5    1   10    0    0         
-                                    name                              STRING[255]    0 "                                                               *"    3    9  256    1    0    0         
+                                    USID                                    USINT    0 "                                                               0"    3    5    1   10    0    0         
+                                    name                              STRING[255]    0 "                                                 'Check Parking'"    3    9  256    1    0    0         
                         outputParameters         opcSkill_checkParking_OutParType    0 "                                                               *"    3   24    1    0    0    0         
-                               shuttleId                                      INT    0 "                                                               *"    4    3    1   10    0    0         
+                               shuttleId                                      INT    0 "                                                               1"    4    3    1   10    0    0         
                                    state                        opcSkillStateType    0 "                                                               *"    3   24    1    0    0    0         
                             stateMachine                      opcStateMachineType    0 "                                                               *"    4   24    1    0    0    0         
-                        operationalState                                     DINT    0 "                                                               *"    5    4    1   10    0    0 e,0,IDLE
+                        operationalState                                     DINT    0 "                                                               0"    5    4    1   10    0    0 e,0,IDLE
 
-                   operationalStateError                              STRING[255]    0 "                                                               *"    5    9  256    1    0    0         
+                   operationalStateError                              STRING[255]    0 "                                                              ''"    5    9  256    1    0    0         
                          stateTransition                   opcStateTransitionType    0 "                                                               *"    5   24    1    0    0    0         
-                                   start                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
-                                   pause                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
-                                  resume                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
-                                 suspend                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
-                               unsuspend                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
-                                    hold                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
-                                  unhold                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
-                                    stop                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
-                                   abort                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
-                                   clear                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
-                                   reset                                     BOOL    0 "                                                               *"    6    1    1    2    0    0         
+                                   start                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
+                                   pause                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
+                                  resume                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
+                                 suspend                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
+                               unsuspend                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
+                                    hold                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
+                                  unhold                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
+                                    stop                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
+                                   abort                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
+                                   clear                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
+                                   reset                                     BOOL    0 "                                                           FALSE"    6    1    1    2    0    0         
                                  lifeBit                           opcLifeBitType    0 "                                                               *"    1   24    1    0    0    0         
                               lifeBitAck                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
-                    TON_SuperTrakLifeBit                                      TON    0 "                                                               *"    0   24    1    0    0    0         
-                                      IN                                     BOOL    0 "                                                               *"    1    1    1    2    0    0         
-                                      PT                                     TIME    0 "                                                               *"    1   12    1    1    0    0         
-                                       Q                                     BOOL    0 "                                                               *"    1    1    1    2    0    0         
-                                      ET                                     TIME    0 "                                                               *"    1   12    1    1    0    0         
-                               StartTime                                     TIME    0 "                                                               *"    1   12    1    1    0    0         
-                                       M                                     BOOL    0 "                                                               *"    1    1    1    2    0    0         
-                                 Restart                                    UDINT    0 "                                                               *"    1    7    1   10    0    0         
+                           Aborting_Init                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                        QA_Actuator_DOWN                                     BOOL    3 "                                                           FALSE"    0    1    1    2    0    0         
+                          QA_Actuator_UP                                     BOOL    3 "                                                           FALSE"    0    1    1    2    0    0         

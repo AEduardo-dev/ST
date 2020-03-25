@@ -7,6 +7,8 @@ ACTION Aborted:
 	Timer_Actuator_DOWN (IN:= FALSE);
 	Timer_Actuator_UP (IN:= FALSE);
 	
+	Skills_Aborted := 0;
+	
 	IF gSuperTrak.state.stateMachine.stateTransition.clear THEN
 		
 		IF NOT SumCritical THEN		

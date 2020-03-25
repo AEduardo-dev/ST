@@ -21,7 +21,7 @@ ACTION Clearing:
 	QA_Actuator_DOWN := TRUE;
 	Timer_Actuator_DOWN (IN := TRUE, PT := T#8s);
 	Outfeed_Actuator_DOWN := TRUE;
-	Timer_Outfeed_DOWN (IN := TRUE, PT := T#30s);
+	Timer_Outfeed_DOWN (IN := TRUE, PT := T#10s);
 	Outfeed_Actuator_BACK := TRUE;
 		
 	IF Timer_Actuator_DOWN.Q AND Timer_Outfeed_DOWN.Q THEN			
@@ -244,23 +244,17 @@ ACTION Clearing:
 					END_IF;
 					
 					(* Send shuttle to parking station *)
-					IF QA_finished (*AND StTargetExt_[4].PalletPresent*) THEN
+					IF EDGEPOS(QA_finished) AND NOT StTargetExt_[4].ReleaseToTarget (*AND StTargetExt_[4].PalletPresent*) THEN
 					
-						(* Wheneer the release of the shuttle has been done the releasetotarget parameter is reset *)
-						IF StTargetExt_[4].CommandDone THEN
-							StTargetExt_[4].ReleaseToTarget := FALSE;
-					 
-						ELSE
-							TargetControlParameters[4].AdvancedReleaseConfig.MoveConfigIdx := 1;
-							TargetControlParameters[4].AdvancedReleaseConfig.DestinationTarget  := 1;
-							TargetControlParameters[4].AdvancedReleaseConfig.Direction     := stCOM_DIR_RIGHT;
+						TargetControlParameters[4].AdvancedReleaseConfig.MoveConfigIdx := 1;
+						TargetControlParameters[4].AdvancedReleaseConfig.DestinationTarget  := 1;
+						TargetControlParameters[4].AdvancedReleaseConfig.Direction     := stCOM_DIR_RIGHT;
 					
-							Shuttle := Shuttle + 1;
+						Shuttle := Shuttle + 1;
 						
-							Counter_Check_Shuttle(IN := FALSE);
-							StTargetExt_[4].ReleaseToTarget := TRUE;
-						END_IF;
-				
+						Counter_Check_Shuttle(IN := FALSE);
+						StTargetExt_[4].ReleaseToTarget := TRUE;
+						
 						IF Shuttle_sent = Last_ID AND Shuttle = Last_ID THEN
 							Calibration_Finished := TRUE;
 						END_IF;
@@ -272,8 +266,14 @@ ACTION Clearing:
 					//				END_IF;	
 					//				
 				
-					IF StTargetExt_[1].CommandDone THEN
-						StTargetExt_[1].ReleaseToTarget := FALSE;
+					
+					IF EDGENEG(StTargetExt_[1].PalletPresent) THEN	
+						StTargetExt_[1].ReleaseToTarget:= FALSE;
+					END_IF;
+					
+					
+					IF EDGENEG(StTargetExt_[4].PalletPresent) THEN	
+						StTargetExt_[4].ReleaseToTarget:= FALSE;
 					END_IF;
 				
 					IF Calibration_Finished THEN
