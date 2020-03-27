@@ -25,7 +25,6 @@ END_VAR
 (*Variables for Event ID's in alarm management*)
 (*======================================*)
 VAR
-	QA_Door_Closed : BOOL;
 	Severity_Code : USINT; (*Severity of the message ( success, info, warning or error)*)
 	Facility_Code : UINT; (*Facility in which the error was produced*)
 	Code : UINT; (*Error code with value between 0 and 65535*)
@@ -48,6 +47,7 @@ VAR
 	gStServiceChannelResData : {REDUND_UNREPLICABLE} ARRAY[0..127] OF USINT := [128(0)]; (*Service channel response buffer (from SuperTrak)*)
 END_VAR
 (************************************************************************************************************************************)
+(*Light Barrier Control and signals*)
 (************************************************************************************************************************************)
 VAR
 	ST_LightBarrier_E2_E : BOOL;
@@ -59,8 +59,9 @@ VAR
 	ST_LightBarrier_SecurityOut2_R : BOOL;
 	Disable_Light_Barrier : BOOL;
 END_VAR
-(*Insert your comment here.*)
-(*Insert your comment here.*)
+(*******************************************************************************************************************************************)
+(*LED control variables*)
+(*******************************************************************************************************************************************)
 VAR
 	LED_Green : BOOL;
 	LED_Blue : BOOL;
@@ -68,7 +69,11 @@ VAR
 	Outfeed_LED_Green : BOOL;
 	Outfeed_LED_Blue : BOOL;
 	Outfeed_LED_Red : BOOL;
-	Outfeed_Full : BOOL;
+END_VAR
+(*******************************************************************************************************************************************)
+(*Actuators control variables*)
+(******************************************************************************************************************************************										*)
+VAR
 	QA_Actuator_UP : BOOL;
 	QA_Actuator_DOWN : BOOL;
 	Outfeed_Actuator_FRONT : BOOL;
@@ -76,3 +81,11 @@ VAR
 	Outfeed_Actuator_UP : BOOL;
 	Outfeed_Actuator_DOWN : BOOL;
 END_VAR
+(*******************************************************************************************************************************************)
+(*Outfeed Management variables*)
+(******************************************************************************************************************************************										*)
+VAR
+	Outfeed_Full : BOOL;
+	Outfeed_Checked : BOOL;
+END_VAR
+(*******************************************************************************************************************************************)

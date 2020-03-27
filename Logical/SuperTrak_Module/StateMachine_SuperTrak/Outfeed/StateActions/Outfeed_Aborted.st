@@ -2,10 +2,14 @@
 ACTION Outfeed_Aborted: 
 	
 	IF gSuperTrak.state.stateMachine.operationalState = ABORTED THEN
-		//TODO: Insert Outfeed LED Light control
+		Outfeed_LED_Blue := FALSE;
+		Outfeed_LED_Green := FALSE;
+		Outfeed_LED_Red := TRUE;
 		
 	ELSE
-		//TODO: Insert Outfeed LED Light control
+		Outfeed_LED_Blue := TRUE;
+		Outfeed_LED_Green := FALSE;
+		Outfeed_LED_Red := FALSE;
 	END_IF;
 	
 		

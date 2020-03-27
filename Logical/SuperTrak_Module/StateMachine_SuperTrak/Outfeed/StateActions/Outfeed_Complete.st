@@ -1,6 +1,7 @@
 
 ACTION Outfeed_Complete:
 	
+	Outfeed_Checked := FALSE;
 	Outfeed_Actuator_UP := FALSE;
 	Outfeed_Actuator_DOWN := FALSE;
 	Outfeed_Actuator_FRONT := FALSE;

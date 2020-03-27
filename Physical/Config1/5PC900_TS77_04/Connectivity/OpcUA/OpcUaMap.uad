@@ -233,7 +233,6 @@
         <Variable Name="New_ID" />
         <Variable Name="SetID" />
         <Variable Name="transitionFromAborted" />
-        <Variable Name="MES_Test" />
       </Task>
       <Task Name="MainContro">
         <Variable Name="Home_Mode" />

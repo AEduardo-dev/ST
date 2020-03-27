@@ -1,33 +1,36 @@
 WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=AlarmHandl 
-Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=60 Force=60 Index=28 ASCIIString=0
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=60 Force=60 Index=30 ASCIIString=0
                                     name                                     type force                                                            value level type len format place expand specs
-                              Event_Code                                     UINT    0 "                                                             200"    0    6    1   10    0    0         
+                              Event_Code                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
                                 EventLog                             EventLog_typ    0 "                                                               *"    0   24    1    0    0    0         
                                 Commands                    EventLog_Commands_typ    0 "                                                               *"    1   24    1    0    0    0         
-                          WriteUserEvent                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
+                          WriteUserEvent                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
                                    Event                       EventLog_Event_typ    0 "                                                               *"    1   24    1    0    0    0         
                                 Severity                                    USINT    0 "                                                               3"    2    5    1   10    0    0         
                                 Customer                                     BOOL    0 "                                                            TRUE"    2    1    1    2    0    0         
-                                Facility                                     UINT    0 "                                                              15"    2    6    1   10    0    0         
-                                    Code                                     UINT    0 "                                                             200"    2    6    1   10    0    0         
+                                Facility                                     UINT    0 "                                                               0"    2    6    1   10    0    0         
+                                    Code                                     UINT    0 "                                                               7"    2    6    1   10    0    0         
                                  EventID                                     DINT    0 "                                                               0"    2    4    1   10    0    0         
                              ErrorNumber                                    UDINT    0 "                                                               0"    2    7    1   10    0    0         
-                               EnteredBy                               STRING[36]    0 "                                                   'General Msg'"    2    9   37    1    0    0         
+                               EnteredBy                               STRING[36]    0 "                                                     'SuperTrak'"    2    9   37    1    0    0         
                                 OriginID                                    UDINT    0 "                                                               0"    2    7    1   10    0    0        v
-                                RecordID                                    UDINT    0 "                                                               5"    2    7    1   10    0    0        v
+                                RecordID                                    UDINT    0 "                                                               6"    2    7    1   10    0    0        v
                                TimeStamp                  ArEventLogTimeStampType    0 "                                                               *"    2   24    1    0    0    0         
                                      sec                                    UDINT    0 "                                                               *"    3    7    1   10    0    0         
                                     nsec                                    UDINT    0 "                                                               *"    3    7    1   10    0    0         
                       AdditionalDataSize                                    UDINT    0 "                                                             121"    2    7    1   10    0    0         
                     AdditionalDataFormat                                    USINT    0 "                                                               1"    2    5    1   10    0    0         
-                          AdditionalData                              STRING[255]    0 "                                  'Emergency button was pressed'"    2    9  256    1    0    0         
+                          AdditionalData                              STRING[255]    0 "  'Timeout Error - Clearing Process Timed Out, Aborting process'"    2    9  256    1    0    0         
               Assembly_Last_Info_Written                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
                General_Last_Info_Written                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
                     ST_Last_Info_Written                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
-                      Last_Event_Written                                     UINT    0 "                                                             200"    0    6    1   10    0    0         
+                      Last_Event_Written                                     UINT    0 "                                                             249"    0    6    1   10    0    0         
                           Restart_Status                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
-                             SumCritical                                     BOOL    0 "                                                            TRUE"    0    1    1    2    0    0         
-                              gSuperTrak                         opcSuperTrakType    0 "                                                               *"    0   24    1    0    0    1         
-                                   state                       opcModuleStateType    0 "                                                               *"    1   24    1    0    0    1         
+                             SumCritical                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         
+                              gSuperTrak                         opcSuperTrakType    0 "                                                               *"    0   24    1    0    0    0         
+                                   state                       opcModuleStateType    0 "                                                               *"    1   24    1    0    0    0         
                         errorAcknowledge                                     BOOL    0 "                                                           FALSE"    2    1    1    2    0    0         
                                New_Event                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         
+                                    Demo                                     BOOL    0 "                                                            TRUE"    0    1    1    2    0    0         
+                                      ID                                      INT    0 "                                                               0"    0    3    1   10    0    0         
+                             Place_Order                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         

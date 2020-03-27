@@ -94,7 +94,7 @@ ACTION Clearing:
 						TargetControlParameters[4].AdvancedReleaseConfig.DestinationTarget  := 1;				
 					
 						//If the shuttle at target 4 does not need to be checked it has to wait a certain time at target 4
-						IF QA_finished THEN
+						IF EDGEPOS(QA_finished) THEN
 							//Set timer to false each time we do something so the timer is not triggered
 							Counter_Clearing_Timeout(IN := FALSE);
 						

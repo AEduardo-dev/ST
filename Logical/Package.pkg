@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.5.3.86 SP?>
+<?AutomationStudio Version=4.5.2.102?>
 <Package Version="1.00.0" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="Package" Description="Global libraries">Libraries</Object>
@@ -9,8 +9,6 @@
     <Object Type="Package">Assembly_Module</Object>
     <Object Type="Package">SuperTrak_Module</Object>
     <Object Type="Package">Events_handling</Object>
-    <Object Type="Package">HMI_Logic</Object>
-    <Object Type="Package">mappView</Object>
     <Object Type="File" Description="Global data types">Global.typ</Object>
   </Objects>
 </Package>

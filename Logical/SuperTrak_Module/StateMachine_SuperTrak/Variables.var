@@ -4,10 +4,8 @@
 VAR
 	Calibration_Finished : BOOL;
 	Shuttle_sent : USINT;
-	MES_Test : BOOL;
 	first_shuttle : BOOL;
 	Skills_Aborted : USINT;
-	Aborting_Init : BOOL;
 	Transition_From_Stopped : BOOL;
 	transitionFromAborted : BOOL;
 	QA_finished : BOOL;
@@ -20,15 +18,12 @@ VAR
 	First_ID : USINT;
 	Last_ID : USINT;
 	Shuttle : USINT := 0;
-	shuttleCounter : USINT;
 	Last_Shuttle : DINT;
 	Index : USINT;
 	iShuttle : USINT;
-	iMessageHelper : USINT := 0; (* Calibration *)
 	Identifier : STRING[80];
 	j : USINT;
 	i : ARRAY[1..6] OF USINT;
-	Checking : BOOL;
 END_VAR
 (*==============================================*)
 (*Calibration state machine*)
@@ -54,6 +49,7 @@ VAR
 	Timer_Actuator_UP : TON;
 	Timer_Enable_Barrier : TON;
 	Timer_Actuator_DOWN : TON;
+	TON_Restore_Outfeed : TON;
 END_VAR
 (*==============================================*)
 (*Aborted Calibration options*)

@@ -39,7 +39,6 @@ ACTION Outfeed:
 		(*************************************************************************************************)
 		(* STARTING *)
 		STARTING: 
-//			gSuperTrak.skill.Outfeed.state.stateMachine.stateTransition.start := FALSE;
 							
 			IF gSuperTrak.skill.Outfeed.state.stateMachine.stateTransition.abort THEN
 				gSuperTrak.skill.Outfeed.state.stateMachine.operationalState := ABORTING;
@@ -67,7 +66,7 @@ ACTION Outfeed:
 				
 			ELSIF gSuperTrak.skill.Outfeed.state.stateMachine.stateTransition.hold THEN
 			
-				//				gSuperTrak.skill.Outfeed.state.stateMachine.operationalState := HOLDING;
+				gSuperTrak.skill.Outfeed.state.stateMachine.operationalState := HOLDING;
 			
 			ELSIF gSuperTrak.skill.Outfeed.state.stateMachine.stateTransition.suspend THEN
 			

@@ -37,3 +37,16 @@ END_VAR
 VAR
 	SumCritical : BOOL;
 END_VAR
+(********************************************************************************************)
+(*Demo Mode Control*)
+(********************************************************************************************)
+VAR
+	Demo : BOOL;
+	Place_Order : BOOL;
+	TON_Release_Target_2 : TON;
+	TON_Release_Target_3 : TON;
+	TON_Release_Target_5 : TON;
+	TON_Release_Target_6 : TON;
+	TON_Check_Parking : TON;
+	ID : INT;
+END_VAR

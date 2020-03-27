@@ -222,16 +222,16 @@ ACTION ST_Events_Data:
 	Events[79].Code_Value		:= 79;
 	Events[79].Event_Message	:= 'QA Service door was illegaly opened';
 	
-	Events[80].Severity_Code 	:= arEVENTLOG_SEVERITY_ERROR;
-	Events[80].Facility_Code 	:= 15;
+	Events[80].Severity_Code 	:= arEVENTLOG_SEVERITY_WARNING;
+	Events[80].Facility_Code 	:= 0;
 	Events[80].Code_Value		:= 80;
-	Events[80].Event_Message	:= '';
+	Events[80].Event_Message	:= 'Outfeed storage is full, please take the products out to continue';
 	
 		
-	Events[81].Severity_Code 	:= arEVENTLOG_SEVERITY_ERROR;
-	Events[81].Facility_Code 	:= 15;
+	Events[81].Severity_Code 	:= arEVENTLOG_SEVERITY_SUCCESS;
+	Events[81].Facility_Code 	:= 0;
 	Events[81].Code_Value		:= 81;
-	Events[81].Event_Message	:= '';
+	Events[81].Event_Message	:= 'Maintenance Mode - Refill finished, restoring the process';
 	
 		
 	Events[82].Severity_Code 	:= arEVENTLOG_SEVERITY_WARNING;
@@ -244,6 +244,11 @@ ACTION ST_Events_Data:
 	Events[83].Facility_Code 	:= 0;
 	Events[83].Code_Value		:= 83;
 	Events[83].Event_Message	:= 'Error has not yet been acknowledged, clear transition not possible';
+	
+	Events[84].Severity_Code 	:= arEVENTLOG_SEVERITY_SUCCESS;
+	Events[84].Facility_Code 	:= 0;
+	Events[84].Code_Value		:= 84;
+	Events[84].Event_Message	:= 'Refill succesfully finished';
 
 	
 	(* Definition of all events ID's *)

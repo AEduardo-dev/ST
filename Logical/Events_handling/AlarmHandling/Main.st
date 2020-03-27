@@ -81,5 +81,11 @@ PROGRAM _CYCLIC
 		InfoHistory;
 	END_IF;
 	
+	
+	IF Demo THEN 
+		Demo_Mode;
+	END_IF;
+	
+	
 END_PROGRAM
 

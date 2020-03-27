@@ -22,6 +22,9 @@ ACTION Outfeed_Aborting:
 	gSuperTrak.skill.Outfeed.state.stateMachine.stateTransition.unsuspend 	:= FALSE;
 	
 	//TODO: Insert Outfeed LED Light control
+	Outfeed_LED_Blue := FALSE;
+	Outfeed_LED_Green := FALSE;
+	Outfeed_LED_Red := TRUE;
 	
 	Outfeed_Actuator_UP := FALSE;	
 	Outfeed_Actuator_DOWN := FALSE;

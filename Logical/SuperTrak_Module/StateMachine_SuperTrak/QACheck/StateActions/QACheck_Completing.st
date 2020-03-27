@@ -6,9 +6,9 @@ ACTION QACheck_Completing:
 	(*Actuator go down and then we get complete*)
 	QA_Actuator_UP := FALSE;
 	LED_Green := FALSE;
-	LED_Red := TRUE;
-	LED_Blue := FALSE;
-	Timer_Enable_Barrier(IN := LED_Red, PT := T#0.5s);
+	LED_Red := FALSE;
+	LED_Blue := TRUE;
+	Timer_Enable_Barrier(IN := LED_Blue, PT := T#0.5s);
 	
 	IF Timer_Enable_Barrier.Q THEN
 		Disable_Light_Barrier := FALSE;

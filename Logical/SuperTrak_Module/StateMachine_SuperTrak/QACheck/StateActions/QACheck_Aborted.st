@@ -2,14 +2,14 @@
 ACTION QACheck_Aborted: 
 	
 	IF gSuperTrak.state.stateMachine.operationalState = ABORTED THEN
-		LED_Blue := TRUE;
-		LED_Green := FALSE;
-		LED_Red := FALSE;
-		
-	ELSE
 		LED_Blue := FALSE;
 		LED_Green := FALSE;
 		LED_Red := TRUE;
+		
+	ELSE
+		LED_Blue := TRUE;
+		LED_Green := FALSE;
+		LED_Red := FALSE;
 	END_IF;
 	
 		

@@ -7,7 +7,6 @@ VAR_CONFIG
 	HW_Comau_Gripper AT %QX."X20DO9322a".DigitalOutput01;
 	::HW_Assem_RightDoorSensor AT %IX."X20DI9371a".DigitalInput01;
 	::HW_Assem_LeftDoorSensor AT %IX."X20DI9371a".DigitalInput02;
-	Cyclic#2.::QA_Door_Closed AT %IX."X20DI9371".DigitalInput01;
 	ST_LightBarrier_SecurityOut1_R AT %IX."X20DI9371".DigitalInput03;
 	ST_LightBarrier_SecurityOut2_R AT %IX."X20DI9371".DigitalInput02;
 	::HW_Assem_PelletPresent AT %IX."X20DI9371".DigitalInput06;
@@ -18,10 +17,10 @@ VAR_CONFIG
 	::Outfeed_Full AT %IX."X20DI9371a".DigitalInput04;
 	::StateMachi:QA_finished AT %IX."X20DI9371a".DigitalInput07;
 	::Outfeed_Actuator_BACK AT %QX."X20DO9322".DigitalOutput01;
-	::Outfeed_Actuator_FRONT  AT %QX."X20DO9322".DigitalOutput02;
+	::Outfeed_Actuator_FRONT AT %QX."X20DO9322".DigitalOutput02;
 	::Outfeed_Actuator_UP AT %QX."X20DO9322".DigitalOutput03;
 	::Outfeed_Actuator_DOWN AT %QX."X20DO9322".DigitalOutput04;
-	::Outfeed_LED_Blue  AT %QX."X20DO9322a".DigitalOutput02;
+	::Outfeed_LED_Blue AT %QX."X20DO9322a".DigitalOutput02;
 	::Outfeed_LED_Red AT %QX."X20DO9322a".DigitalOutput03;
 	::Outfeed_LED_Green AT %QX."X20DO9322a".DigitalOutput04;
 END_VAR
