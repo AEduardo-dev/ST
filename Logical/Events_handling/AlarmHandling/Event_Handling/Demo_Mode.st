@@ -18,9 +18,10 @@ ACTION Demo_Mode:
 	END_IF;
 	
 	//checkParking returns -1 if there is no shuttle there at the station
-	IF ID <> -1 AND StTargetExt_[1].PalletPresent THEN 
+	IF ID <> -1 AND ID <> 0 AND StTargetExt_[1].PalletPresent THEN 
 		
 		Place_Order := FALSE;	
+		ID := 0;
 		TargetControlParameters[1].AdvancedReleaseConfig.DestinationTarget := 2;
 		StTargetExt_[1].ReleaseToTarget := TRUE;
 		
@@ -61,45 +62,50 @@ ACTION Demo_Mode:
 	IF StTargetExt_[3].PalletPresent THEN
 			
 		TON_Release_Target_3 (IN := TRUE, PT := T#15s);	
-		TON_Check_Parking (IN := TRUE, PT := T#1s);
+		
 		IF TON_Release_Target_3.Q THEN
 				
+			Get_away := TRUE;
 			StTargetExt_[3].ReleaseToTarget := TRUE;
-			
-			IF StTargetExt_[1].PalletPresent AND NOT StTargetExt_[1].ReleaseToTarget
-				AND NOT TON_Check_Parking.Q THEN
-			
-				TON_Check_Parking (IN := FALSE);
-				TargetControlParameters[1].AdvancedReleaseConfig.DestinationTarget := 8;
-				StTargetExt_[1].ReleaseToTarget := TRUE;	
-				
-			END_IF;
-			
-			IF TON_Check_Parking.Q THEN
-			
-				TargetControlParameters[1].AdvancedReleaseConfig.DestinationTarget := 2;
-				
-			END_IF;
-			
-			
-			IF EDGENEG(StTargetExt_[1].PalletPresent) THEN
-				
-				StTargetExt_[1].ReleaseToTarget := FALSE;
-			
-			END_IF;
+			TargetControlParameters[1].AdvancedReleaseConfig.DestinationTarget := 8;
+			TON_Check_Parking (IN := TRUE, PT := T#5.5s);
 			
 		END_IF;
 			
 	END_IF;
 
-		IF EDGENEG(StTargetExt_[3].PalletPresent) AND
-			TargetControlParameters[1].AdvancedReleaseConfig.DestinationTarget = Target_2 THEN
+	IF EDGENEG(StTargetExt_[3].PalletPresent) THEN
 			
 		StTargetExt_[3].ReleaseToTarget := FALSE;
 		TON_Release_Target_3 (IN := FALSE);
 			
 	END_IF;
 	
+	
+	
+	IF StTargetExt_[1].PalletPresent AND NOT StTargetExt_[1].ReleaseToTarget
+		AND NOT TON_Check_Parking.Q AND Get_away THEN
+			
+		TargetControlParameters[1].AdvancedReleaseConfig.DestinationTarget := 8;
+		StTargetExt_[1].ReleaseToTarget := TRUE;	
+				
+	END_IF;
+			
+	IF TON_Check_Parking.Q THEN
+			
+		Get_away := FALSE;
+		TON_Check_Parking (IN := FALSE);
+		TargetControlParameters[1].AdvancedReleaseConfig.DestinationTarget := 2;
+				
+	END_IF;
+			
+			
+	IF EDGENEG(StTargetExt_[1].PalletPresent) THEN
+				
+		StTargetExt_[1].ReleaseToTarget := FALSE;
+			
+	END_IF;
+			
 	
 	
 	
@@ -189,6 +195,20 @@ ACTION Demo_Mode:
 	IF EDGENEG(StTargetExt_[7].PalletPresent) THEN
 			
 		StTargetExt_[7].ReleaseToTarget := FALSE;
+			
+	END_IF;
+	
+	
+	//Virtual Target
+	IF StTargetExt_[8].PalletPresent THEN
+	
+		StTargetExt_[8].ReleaseToTarget := TRUE;
+		
+	END_IF;
+
+	IF EDGENEG(StTargetExt_[8].PalletPresent) THEN
+			
+		StTargetExt_[8].ReleaseToTarget := FALSE;
 			
 	END_IF;
 	

@@ -41,8 +41,9 @@ END_VAR
 (*Demo Mode Control*)
 (********************************************************************************************)
 VAR
-	Demo : BOOL;
-	Place_Order : BOOL;
+	Demo : BOOL := FALSE;
+	Get_away : BOOL := FALSE;
+	Place_Order : BOOL := FALSE;
 	TON_Release_Target_2 : TON;
 	TON_Release_Target_3 : TON;
 	TON_Release_Target_5 : TON;
