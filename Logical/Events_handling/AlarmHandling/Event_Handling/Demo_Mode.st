@@ -3,8 +3,9 @@ ACTION Demo_Mode:
 //Mode where the whole process can be simulated wothout needing an MES execution. 
 //Only SuperTrak is controlled and the modules interaction is faked using timers for a realistic executio.
 
-	IF Place_Order THEN
+	IF Place_Order AND (ID = 0 OR ID = -1) THEN
 		//Call skill checkParking to retrieve shuttleID
+		
 		gSuperTrak.skill.checkParking.state.stateMachine.stateTransition.start := TRUE;
 		
 		//When skill is finished store the ID in a variable
@@ -61,11 +62,14 @@ ACTION Demo_Mode:
 	//SeedSupply Module
 	IF StTargetExt_[3].PalletPresent THEN
 			
-		TON_Release_Target_3 (IN := TRUE, PT := T#15s);	
+		TON_Release_Target_3 (IN := TRUE, PT := T#12s);	
 		
 		IF TON_Release_Target_3.Q THEN
-				
-			Get_away := TRUE;
+			
+			IF StTargetExt_[1].PalletPresent THEN
+				Get_away := TRUE;
+			END_IF;
+			
 			StTargetExt_[3].ReleaseToTarget := TRUE;
 			TargetControlParameters[1].AdvancedReleaseConfig.DestinationTarget := 8;
 			TON_Check_Parking (IN := TRUE, PT := T#5.5s);
@@ -112,7 +116,15 @@ ACTION Demo_Mode:
 	//QA Station
 	IF StTargetExt_[4].PalletPresent THEN
 			
-		gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.start := TRUE;
+		IF gSuperTrak.skill.QACheck.state.stateMachine.operationalState = IDLE THEN
+			
+			gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.start := TRUE;
+			
+		ELSE
+			
+			gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.start := FALSE;
+
+		END_IF;
 			
 		IF gSuperTrak.skill.QACheck.state.stateMachine.operationalState = COMPLETE THEN
 				
@@ -135,7 +147,7 @@ ACTION Demo_Mode:
 	//Sealing Module
 	IF StTargetExt_[5].PalletPresent THEN
 			
-		TON_Release_Target_5 (IN := TRUE, PT := T#25s);
+		TON_Release_Target_5 (IN := TRUE, PT := T#15s);
 			
 		IF TON_Release_Target_5.Q THEN
 				
@@ -181,7 +193,17 @@ ACTION Demo_Mode:
 	//Outfeed Station
 	IF StTargetExt_[7].PalletPresent THEN
 			
-		gSuperTrak.skill.Outfeed.state.stateMachine.stateTransition.start := TRUE;
+		
+		IF gSuperTrak.skill.Outfeed.state.stateMachine.operationalState = IDLE THEN
+			
+			gSuperTrak.skill.Outfeed.state.stateMachine.stateTransition.start := TRUE;
+			
+		ELSE
+			
+			gSuperTrak.skill.Outfeed.state.stateMachine.stateTransition.start := FALSE;
+
+		END_IF;
+		
 			
 		IF gSuperTrak.skill.Outfeed.state.stateMachine.operationalState = COMPLETE THEN
 			
@@ -213,5 +235,6 @@ ACTION Demo_Mode:
 	END_IF;
 	
 	
+	TON_Check_Parking ();
 	
 END_ACTION

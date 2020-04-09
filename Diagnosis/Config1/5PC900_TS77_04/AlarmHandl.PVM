@@ -1,5 +1,5 @@
 WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=AlarmHandl 
-Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=60 Force=60 Index=32 ASCIIString=0
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=60 Force=60 Index=41 ASCIIString=0
                                     name                                     type force                                                            value level type len format place expand specs
                               Event_Code                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
                                 EventLog                             EventLog_typ    0 "                                                               *"    0   24    1    0    0    0         
@@ -12,7 +12,7 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=60 Force=60 I
                                     Code                                     UINT    0 "                                                               *"    2    6    1   10    0    0         
                                  EventID                                     DINT    0 "                                                               *"    2    4    1   10    0    0         
                              ErrorNumber                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
-                               EnteredBy                               STRING[36]    0 "                                                              ''"    2    9   37    1    0    0         
+                               EnteredBy                               STRING[36]    0 "                                                               *"    2    9   37    1    0    0         
                                 OriginID                                    UDINT    0 "                                                               *"    2    7    1   10    0    0        v
                                 RecordID                                    UDINT    0 "                                                               *"    2    7    1   10    0    0        v
                                TimeStamp                  ArEventLogTimeStampType    0 "                                                               *"    2   24    1    0    0    0         
@@ -20,7 +20,7 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=60 Force=60 I
                                     nsec                                    UDINT    0 "                                                               *"    3    7    1   10    0    0         
                       AdditionalDataSize                                    UDINT    0 "                                                               *"    2    7    1   10    0    0         
                     AdditionalDataFormat                                    USINT    0 "                                                               *"    2    5    1   10    0    0         
-                          AdditionalData                              STRING[255]    0 "                                                              ''"    2    9  256    1    0    0         
+                          AdditionalData                              STRING[255]    0 "                                                               *"    2    9  256    1    0    0         
               Assembly_Last_Info_Written                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
                General_Last_Info_Written                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
                     ST_Last_Info_Written                                     UINT    0 "                                                               0"    0    6    1   10    0    0         
@@ -31,7 +31,15 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=200 Type=100 Scope=60 Force=60 I
                                    state                       opcModuleStateType    0 "                                                               *"    1   24    1    0    0    0         
                         errorAcknowledge                                     BOOL    0 "                                                               *"    2    1    1    2    0    0         
                                New_Event                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         
-                                Get_away                                     BOOL    0 "                                                            TRUE"    0    1    1    2    0    0         
+                                Get_away                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         
                                     Demo                                     BOOL    0 "                                                            TRUE"    0    1    1    2    0    0         
-                                      ID                                      INT    0 "                                                               1"    0    3    1   10    0    0         
+                                      ID                                      INT    0 "                                                               0"    0    3    1   10    0    0         
+                       TON_Check_Parking                                      TON    0 "                                                               *"    0   24    1    0    0    0         
+                                      IN                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                      PT                                     TIME    0 "                                                     T#05s_500ms"    1   12    1    1    0    0         
+                                       Q                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                      ET                                     TIME    0 "                                                           T#0ms"    1   12    1    1    0    0         
+                               StartTime                                     TIME    0 "                                                 T#08m_44s_690ms"    1   12    1    1    0    0         
+                                       M                                     BOOL    0 "                                                           FALSE"    1    1    1    2    0    0         
+                                 Restart                                    UDINT    0 "                                                              36"    1    7    1   10    0    0         
                              Place_Order                                     BOOL    0 "                                                           FALSE"    0    1    1    2    0    0         

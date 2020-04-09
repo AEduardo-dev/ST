@@ -15,6 +15,8 @@ ACTION Stopping:
 
 	//Send abort transition to the skills 
 	gSuperTrak.skill.checkParking.state.stateMachine.stateTransition.abort := TRUE;
+	gSuperTrak.skill.Outfeed.state.stateMachine.stateTransition.abort := TRUE;
+	gSuperTrak.skill.QACheck.state.stateMachine.stateTransition.abort := TRUE;
 				
 	FOR iShuttle := 1 TO SUPERTRAK_SHUTTLES DO				
 		gSuperTrak.skill.moveShuttle[iShuttle].state.stateMachine.stateTransition.abort := TRUE;

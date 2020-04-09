@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.5.2.102?>
+<?AutomationStudio Version=4.5.3.86 SP?>
 <State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State">
-  <TextEdit ID="D:\GIT\ST\Logical\Events_handling\AlarmHandling\Event_Handling\Demo_Mode.st" CaretLine="24" CaretColumn="11" FirstVisibleLine="13">
+  <TextEdit ID="D:\GIT\ST\Logical\Events_handling\AlarmHandling\Event_Handling\Demo_Mode.st" CaretLine="199" CaretColumn="78" FirstVisibleLine="193">
     <Bookmarks />
   </TextEdit>
 </State>

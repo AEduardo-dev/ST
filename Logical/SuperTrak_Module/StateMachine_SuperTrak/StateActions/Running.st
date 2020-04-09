@@ -19,9 +19,9 @@ ACTION Running:
 		END_IF;
 	END_FOR;
 	
-	(* If not we wait for the pause trigger *)
-	IF	gSuperTrak.state.stateMachine.stateTransition.pause THEN
-		gSuperTrak.state.stateMachine.operationalState := PAUSING;
+	(* If not we wait for the hold trigger *)
+	IF	gSuperTrak.state.stateMachine.stateTransition.hold THEN
+		gSuperTrak.state.stateMachine.operationalState := HOLDING;
 	END_IF;
 		
 	Timer_Send_Super_Trak_In_Stop();
