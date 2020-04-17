@@ -29,6 +29,7 @@ ACTION ST_Events_Data:
 	Events[4].Facility_Code 	:= 15;
 	Events[4].Code_Value		:= 4;
 	Events[4].Event_Message		:= 'Timeout Error - Lost connection to MES.';
+	
 (*	Change angel
 	Events[5].Severity_Code 	:= arEVENTLOG_SEVERITY_ERROR;
 	Events[5].Facility_Code 	:= 15;
@@ -169,7 +170,7 @@ ACTION ST_Events_Data:
 		Events[iEvent].Severity_Code 	:= arEVENTLOG_SEVERITY_ERROR;
 		Events[iEvent].Facility_Code 	:= 0;
 		Events[iEvent].Code_Value		:= iEvent;
-		Events[iEvent].Event_Message	:= CONCAT(gSuperTrak.skill.moveShuttle[i].name, ' - Final Target does not exist.');
+		Events[iEvent].Event_Message	:='Skill moveShuttle.- Final Target does not exist';
 		
 	END_FOR;
 	
@@ -180,7 +181,7 @@ ACTION ST_Events_Data:
 		Events[iEvent].Severity_Code 	:= arEVENTLOG_SEVERITY_INFO;
 		Events[iEvent].Facility_Code 	:= 0;
 		Events[iEvent].Code_Value		:= iEvent;
-		Events[iEvent].Event_Message	:= CONCAT(gSuperTrak.skill.moveShuttle[i].name, ' - Shuttle finished product cycle.');
+		Events[iEvent].Event_Message	:= 'Skill moveShuttle.-  Shuttle finished product cycle.';
 	
 	END_FOR;
 	
@@ -190,7 +191,7 @@ ACTION ST_Events_Data:
 		Events[iEvent].Severity_Code 	:= arEVENTLOG_SEVERITY_ERROR;
 		Events[iEvent].Facility_Code 	:= 0;
 		Events[iEvent].Code_Value		:= iEvent;
-		Events[iEvent].Event_Message	:= CONCAT(gSuperTrak.skill.moveShuttle[i].name, ' - Final Target equals current target.');
+		Events[iEvent].Event_Message	:= 'Skill moveShuttle.-  Final Target equals current target.';
 		
 	END_FOR;
 	
@@ -200,14 +201,14 @@ ACTION ST_Events_Data:
 		Events[iEvent].Severity_Code 	:= arEVENTLOG_SEVERITY_ERROR;
 		Events[iEvent].Facility_Code 	:= 0;
 		Events[iEvent].Code_Value		:= iEvent;
-		Events[iEvent].Event_Message	:= CONCAT(gSuperTrak.skill.moveShuttle[i].name, ' - Skill was aborted.');
+		Events[iEvent].Event_Message	:= 'Skill moveShuttle.-  Skill was aborted.';
 		
 	END_FOR;
 	
 	Events[77].Severity_Code 	:= arEVENTLOG_SEVERITY_ERROR;
 	Events[77].Facility_Code 	:= 15;
 	Events[77].Code_Value		:= 77;
-	Events[77].Event_Message	:= 'checkParking Skill was aborted';
+	Events[77].Event_Message	:= 'Skill checkParking.- Skill was aborted';
 	
 	
 	(*Service Stations Events*)
@@ -231,7 +232,7 @@ ACTION ST_Events_Data:
 	Events[81].Severity_Code 	:= arEVENTLOG_SEVERITY_SUCCESS;
 	Events[81].Facility_Code 	:= 0;
 	Events[81].Code_Value		:= 81;
-	Events[81].Event_Message	:= 'Maintenance Mode - Refill finished, restoring the process';
+	Events[81].Event_Message	:= 'Maintenance Mode - Outfeed clearing, restoring the process';
 	
 		
 	Events[82].Severity_Code 	:= arEVENTLOG_SEVERITY_WARNING;

@@ -1,9 +1,34 @@
 
 ACTION Demo_Mode: 
 //Mode where the whole process can be simulated wothout needing an MES execution. 
-//Only SuperTrak is controlled and the modules interaction is faked using timers for a realistic executio.
+//Only SuperTrak is controlled and the modules interaction is faked using timers for a realistic execution.
 
-	IF Place_Order AND (ID = 0 OR ID = -1) THEN
+	IF gSuperTrak.state.stateMachine.operationalState = ABORTED 
+		AND SumCritical = FALSE THEN
+	
+		gSuperTrak.state.stateMachine.stateTransition.clear := TRUE;
+		
+	END_IF;
+	
+	IF gSuperTrak.state.stateMachine.operationalState = STOPPED THEN
+	
+		gSuperTrak.state.stateMachine.stateTransition.reset := TRUE;
+		
+	END_IF;		
+	
+	
+	IF gSuperTrak.state.stateMachine.operationalState = IDLE THEN
+	
+		gSuperTrak.state.stateMachine.stateTransition.start := TRUE;
+		
+	END_IF;
+	
+	
+	
+	
+	IF  gSuperTrak.state.stateMachine.operationalState = RUNNING AND
+		Place_Order AND (ID = 0 OR ID = -1) THEN
+		
 		//Call skill checkParking to retrieve shuttleID
 		
 		gSuperTrak.skill.checkParking.state.stateMachine.stateTransition.start := TRUE;
@@ -71,8 +96,7 @@ ACTION Demo_Mode:
 			END_IF;
 			
 			StTargetExt_[3].ReleaseToTarget := TRUE;
-			TargetControlParameters[1].AdvancedReleaseConfig.DestinationTarget := 8;
-			TON_Check_Parking (IN := TRUE, PT := T#5.5s);
+			TON_Check_Parking (IN := TRUE, PT := T#3.5s);
 			
 		END_IF;
 			
@@ -91,6 +115,7 @@ ACTION Demo_Mode:
 		AND NOT TON_Check_Parking.Q AND Get_away THEN
 			
 		TargetControlParameters[1].AdvancedReleaseConfig.DestinationTarget := 8;
+		TargetControlParameters[1].AdvancedReleaseConfig.MoveConfigIdx := 2;
 		StTargetExt_[1].ReleaseToTarget := TRUE;	
 				
 	END_IF;
@@ -100,6 +125,7 @@ ACTION Demo_Mode:
 		Get_away := FALSE;
 		TON_Check_Parking (IN := FALSE);
 		TargetControlParameters[1].AdvancedReleaseConfig.DestinationTarget := 2;
+		TargetControlParameters[1].AdvancedReleaseConfig.MoveConfigIdx := 1;
 				
 	END_IF;
 			

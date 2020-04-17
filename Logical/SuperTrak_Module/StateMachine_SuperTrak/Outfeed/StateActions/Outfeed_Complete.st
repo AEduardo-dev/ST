@@ -7,6 +7,10 @@ ACTION Outfeed_Complete:
 	Outfeed_Actuator_FRONT := FALSE;
 	Outfeed_Actuator_BACK := FALSE;
 	
+	Outfeed_LED_Blue := TRUE;
+	Outfeed_LED_Green := FALSE;
+	Outfeed_LED_Red := FALSE;
+	
 	(* Skill stays in complete until trigger from MES *)
 	IF gSuperTrak.skill.Outfeed.state.stateMachine.stateTransition.reset THEN
 		gSuperTrak.skill.Outfeed.state.stateMachine.operationalState := RESETTING;
